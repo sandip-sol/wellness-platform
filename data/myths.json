@@ -1,0 +1,183 @@
+[
+    {
+        "id": "myth-1",
+        "title": "Masturbation causes weakness",
+        "myth": "Masturbation leads to physical weakness, memory loss, and poor eyesight.",
+        "fact": "Masturbation is a normal, safe sexual activity. There is zero medical evidence linking it to weakness, memory loss, or vision problems.",
+        "explanation": "This myth is deeply rooted in cultural taboos and has been debunked by every major medical organization including the WHO. Masturbation does not deplete any vital nutrients or energy.",
+        "indiaContext": "In India, this myth is often reinforced through concepts like 'dhat syndrome' — the belief that semen loss causes physical weakness. While the anxiety around it is real and treatable, the physical claims are unfounded.",
+        "references": [
+            "WHO Sexual Health Guidelines",
+            "Indian Journal of Psychiatry, 2013"
+        ],
+        "category": "body-literacy",
+        "tags": [
+            "masturbation",
+            "myths",
+            "dhat"
+        ]
+    },
+    {
+        "id": "myth-2",
+        "title": "You can't get pregnant the first time",
+        "myth": "A person cannot get pregnant during their first sexual intercourse.",
+        "fact": "Pregnancy can occur any time unprotected vaginal intercourse happens, including the very first time.",
+        "explanation": "Ovulation doesn't depend on prior sexual experience. If an egg is available and sperm is present, fertilization can happen — regardless of whether it's the first time or the hundredth.",
+        "indiaContext": "Many young people in India receive limited sex education. The 'first time myth' contributes to unplanned pregnancies, especially in newly married couples who may delay contraception.",
+        "references": [
+            "FOGSI Guidelines on Contraception",
+            "NHS UK - Contraception Facts"
+        ],
+        "category": "contraception",
+        "tags": [
+            "pregnancy",
+            "first-time",
+            "contraception"
+        ]
+    },
+    {
+        "id": "myth-3",
+        "title": "Only men enjoy sex",
+        "myth": "Sexual pleasure is primarily a male experience; women don't or shouldn't enjoy sex.",
+        "fact": "Sexual pleasure is a normal human experience regardless of gender. Women have as much physiological capacity for pleasure as men.",
+        "explanation": "The clitoris has over 8,000 nerve endings — its sole purpose is pleasure. Research consistently shows that sexual satisfaction is important for everyone's wellbeing and relationship quality.",
+        "indiaContext": "In many Indian communities, female sexuality is suppressed or considered shameful. This myth contributes to sexual dissatisfaction and can harm relationships. Open communication about mutual pleasure is key to healthy intimacy.",
+        "references": [
+            "Journal of Sexual Medicine",
+            "The Kinsey Institute"
+        ],
+        "category": "body-literacy",
+        "tags": [
+            "female-pleasure",
+            "gender",
+            "myths"
+        ]
+    },
+    {
+        "id": "myth-4",
+        "title": "STIs only happen to 'promiscuous' people",
+        "myth": "Sexually transmitted infections only affect people who have many sexual partners.",
+        "fact": "Anyone who is sexually active can contract an STI, regardless of the number of partners. Even one unprotected encounter carries risk.",
+        "explanation": "STIs are caused by bacteria, viruses, or parasites — they don't discriminate based on morality or partner count. Many STIs like HPV and herpes are extremely common and can be transmitted even with just one partner.",
+        "indiaContext": "Stigma around STIs in India prevents many people from getting tested. Government clinics and many private labs offer confidential and affordable STI testing. Early detection makes treatment much easier.",
+        "references": [
+            "NACO India - STI Guidelines",
+            "WHO Fact Sheet on STIs"
+        ],
+        "category": "sexual-health",
+        "tags": [
+            "STI",
+            "testing",
+            "stigma"
+        ]
+    },
+    {
+        "id": "myth-5",
+        "title": "Condoms reduce pleasure significantly",
+        "myth": "Using condoms makes sex significantly less pleasurable and isn't worth it.",
+        "fact": "Modern condoms are designed to be thin and comfortable. Any minimal reduction in sensation is far outweighed by protection against STIs and unplanned pregnancy.",
+        "explanation": "Ultra-thin condoms, textured options, and proper sizing have made modern condoms highly comfortable. Studies show that satisfaction differences are minimal, and the peace of mind they provide actually improves the overall experience for many couples.",
+        "indiaContext": "Condoms are widely available in India — from pharmacy shops to government distribution programs. Brands offer ultra-thin varieties. The ₹1 Nirodh condom is available free at government health centers.",
+        "references": [
+            "Indian Journal of Medical Research",
+            "Planned Parenthood"
+        ],
+        "category": "sexual-health",
+        "tags": [
+            "condoms",
+            "contraception",
+            "pleasure"
+        ]
+    },
+    {
+        "id": "myth-6",
+        "title": "LGBTQIA+ identities are a Western influence",
+        "myth": "Homosexuality and gender diversity are imported from Western culture and are unnatural.",
+        "fact": "Same-sex relationships and gender diversity have been documented throughout Indian history, art, and religious texts for thousands of years.",
+        "explanation": "Ancient Indian texts like the Kamasutra, temple carvings at Khajuraho, and stories from mythology all reference diverse sexualities and gender identities. The Supreme Court of India decriminalized homosexuality in 2018 (Navtej Singh Johar v. Union of India).",
+        "indiaContext": "India has a rich tradition of gender and sexual diversity. The Hijra community has been recognized for centuries. Section 377 was a colonial-era law, not an Indian one. LGBTQIA+ identities are as Indian as any other.",
+        "references": [
+            "Supreme Court of India - Navtej Singh Johar v. Union of India, 2018",
+            "Ruth Vanita - Same-Sex Love in India"
+        ],
+        "category": "lgbtqia",
+        "tags": [
+            "LGBTQIA",
+            "history",
+            "India",
+            "section-377"
+        ]
+    },
+    {
+        "id": "myth-7",
+        "title": "Talking about sex with your partner is awkward and unnecessary",
+        "myth": "Good partners should intuitively know what the other person wants without discussing it.",
+        "fact": "Open communication about desires, boundaries, and comfort is the single most important factor in sexual satisfaction and healthy relationships.",
+        "explanation": "Research consistently shows that couples who communicate about sex report higher satisfaction. Nobody is a mind reader — preferences vary widely between people, and they change over time. Talking isn't awkward, it's essential.",
+        "indiaContext": "In many Indian marriages, especially arranged marriages, couples may have never discussed intimacy before being together. Starting with small, respectful conversations can dramatically improve relationship quality. Our Couples Check-in tool is designed to help.",
+        "references": [
+            "Journal of Marriage and Family Therapy",
+            "Gottman Institute Research"
+        ],
+        "category": "relationships",
+        "tags": [
+            "communication",
+            "couples",
+            "intimacy"
+        ]
+    },
+    {
+        "id": "myth-8",
+        "title": "Emergency contraception is an 'abortion pill'",
+        "myth": "The morning-after pill (emergency contraception) is the same as an abortion pill and terminates pregnancy.",
+        "fact": "Emergency contraception prevents pregnancy from occurring in the first place — it does not terminate an existing pregnancy.",
+        "explanation": "Emergency contraceptive pills (like i-pill or Unwanted 72) work by delaying ovulation or preventing fertilization. They are ineffective once implantation has occurred. They are NOT the same as medical abortion pills (mifepristone/misoprostol).",
+        "indiaContext": "Emergency contraception is available over the counter in India without prescription. It should be taken within 72 hours of unprotected intercourse. It is a backup method, not a regular contraception strategy.",
+        "references": [
+            "FOGSI - Emergency Contraception Guidelines",
+            "WHO - Emergency Contraception Fact Sheet"
+        ],
+        "category": "contraception",
+        "tags": [
+            "emergency-contraception",
+            "i-pill",
+            "pregnancy"
+        ]
+    },
+    {
+        "id": "myth-9",
+        "title": "Size determines sexual satisfaction",
+        "myth": "Genital size is the primary determinant of sexual pleasure and performance.",
+        "fact": "Sexual satisfaction depends on communication, emotional connection, technique, and mutual respect — not on anatomy measurements.",
+        "explanation": "Studies consistently show that genital size has minimal correlation with partner satisfaction. Most nerve endings are concentrated in specific areas, and emotional intimacy, foreplay, and communication are far stronger predictors of enjoyment.",
+        "indiaContext": "Misleading advertisements for 'enlargement' products are rampant in India. These products are medically useless and often harmful. If anxiety about body image is affecting your wellbeing, speaking with a counsellor can help.",
+        "references": [
+            "British Journal of Urology International",
+            "Journal of Sexual Medicine"
+        ],
+        "category": "body-literacy",
+        "tags": [
+            "body-image",
+            "size-anxiety",
+            "myths"
+        ]
+    },
+    {
+        "id": "myth-10",
+        "title": "Married people can't be sexually assaulted by their spouse",
+        "myth": "Marriage implies permanent consent — a spouse cannot refuse sexual activity.",
+        "fact": "Consent is required for every sexual interaction, regardless of marital status. Marital rape is a violation of bodily autonomy.",
+        "explanation": "Every person has the right to say no at any time, including within a marriage. Forced sex within marriage causes the same psychological and physical harm as assault by a stranger. Consent must be freely given each time.",
+        "indiaContext": "While Indian law has not yet fully criminalized marital rape (except for cases involving separated spouses or minors), multiple High Courts and the ongoing legal discourse recognize it as a violation of fundamental rights. Support is available through helplines like Women Helpline 181.",
+        "references": [
+            "Karnataka High Court - RIT Foundation case, 2022",
+            "National Commission for Women India"
+        ],
+        "category": "consent",
+        "tags": [
+            "consent",
+            "marital-rape",
+            "rights"
+        ]
+    }
+]

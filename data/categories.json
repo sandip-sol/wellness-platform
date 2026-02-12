@@ -1,0 +1,58 @@
+[
+    {
+        "id": "sexual-health",
+        "name": "Sexual Health",
+        "icon": "🏥",
+        "description": "STIs, contraception, symptoms, testing, and when to see a doctor",
+        "questionCount": 0
+    },
+    {
+        "id": "relationships",
+        "name": "Relationships & Communication",
+        "icon": "💬",
+        "description": "Intimacy, communication, boundaries, and healthy dynamics",
+        "questionCount": 0
+    },
+    {
+        "id": "consent",
+        "name": "Consent & Boundaries",
+        "icon": "🤝",
+        "description": "Understanding consent, setting boundaries, and respecting limits",
+        "questionCount": 0
+    },
+    {
+        "id": "lgbtqia",
+        "name": "LGBTQIA+ Wellness",
+        "icon": "🌈",
+        "description": "Inclusive sexual health, identity, and safe practices",
+        "questionCount": 0
+    },
+    {
+        "id": "mental-wellbeing",
+        "name": "Mental & Emotional Wellbeing",
+        "icon": "🧠",
+        "description": "Anxiety, shame, body image, expectations, and self-care",
+        "questionCount": 0
+    },
+    {
+        "id": "marriage-intimacy",
+        "name": "Marriage & Long-term Intimacy",
+        "icon": "💑",
+        "description": "Sustaining intimacy, reigniting connection, and navigating changes",
+        "questionCount": 0
+    },
+    {
+        "id": "contraception",
+        "name": "Contraception & Family Planning",
+        "icon": "💊",
+        "description": "Birth control methods, effectiveness, side effects, and access in India",
+        "questionCount": 0
+    },
+    {
+        "id": "body-literacy",
+        "name": "Body Literacy & Anatomy",
+        "icon": "📖",
+        "description": "Understanding your body, normal variation, and debunking myths",
+        "questionCount": 0
+    }
+]

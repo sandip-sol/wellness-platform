@@ -1,0 +1,66 @@
+.accordionItem {
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: all var(--transition-base);
+    background: var(--color-bg-card);
+}
+
+.accordionItem+.accordionItem {
+    margin-top: var(--space-3);
+}
+
+.accordionItem:hover {
+    border-color: var(--color-border);
+}
+
+.accordionTrigger {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-4) var(--space-5);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: var(--font-size-base);
+    color: var(--color-ink);
+    text-align: left;
+    gap: var(--space-4);
+    transition: background var(--transition-fast);
+}
+
+.accordionTrigger:hover {
+    background: var(--color-bg-alt);
+}
+
+.accordionChevron {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    transition: transform var(--transition-base);
+    color: var(--color-ink-muted);
+}
+
+.open .accordionChevron {
+    transform: rotate(180deg);
+}
+
+.accordionContent {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height var(--transition-slow), padding var(--transition-slow);
+}
+
+.open .accordionContent {
+    max-height: 500px;
+}
+
+.accordionBody {
+    padding: 0 var(--space-5) var(--space-5);
+    font-size: var(--font-size-sm);
+    color: var(--color-ink-light);
+    line-height: var(--line-height-relaxed);
+}

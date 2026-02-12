@@ -1,0 +1,98 @@
+.mythCard {
+    background: var(--color-bg-card);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--color-border-light);
+    transition: all var(--transition-base);
+}
+
+.mythCard:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.mythSection {
+    padding: var(--space-4) var(--space-5);
+}
+
+.mythLabel {
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: var(--space-2);
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.mythText {
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-relaxed);
+    color: var(--color-ink);
+}
+
+.mythPart {
+    background: var(--color-danger-light);
+    border-left: 3px solid var(--color-danger);
+}
+
+.mythPart .mythLabel {
+    color: var(--color-danger);
+}
+
+.factPart {
+    background: var(--color-success-light);
+    border-left: 3px solid var(--color-success);
+}
+
+.factPart .mythLabel {
+    color: #16A34A;
+}
+
+.whyPart {
+    background: var(--color-bg-card);
+    border-left: 3px solid var(--color-primary);
+}
+
+.whyPart .mythLabel {
+    color: var(--color-primary-dark);
+}
+
+.indiaPart {
+    background: var(--color-warning-light);
+    border-left: 3px solid var(--color-warning);
+}
+
+.indiaPart .mythLabel {
+    color: #B45309;
+}
+
+.mythTitle {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: var(--font-size-lg);
+    padding: var(--space-4) var(--space-5);
+    border-bottom: 1px solid var(--color-border-light);
+    color: var(--color-ink);
+}
+
+.references {
+    padding: var(--space-3) var(--space-5);
+    background: var(--color-bg-alt);
+    font-size: var(--font-size-xs);
+    color: var(--color-ink-muted);
+}
+
+.refList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+}
+
+.refItem {
+    background: var(--color-bg-card);
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-xs);
+}

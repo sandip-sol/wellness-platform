@@ -1,0 +1,52 @@
+.tabList {
+    display: flex;
+    gap: var(--space-1);
+    border-bottom: 2px solid var(--color-border-light);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+.tabList::-webkit-scrollbar {
+    display: none;
+}
+
+.tab {
+    padding: var(--space-3) var(--space-5);
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: var(--font-size-sm);
+    color: var(--color-ink-muted);
+    white-space: nowrap;
+    position: relative;
+    transition: color var(--transition-fast);
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+}
+
+.tab:hover {
+    color: var(--color-ink);
+}
+
+.tabActive {
+    color: var(--color-primary-dark);
+    border-bottom-color: var(--color-primary);
+}
+
+.tabPanel {
+    padding-top: var(--space-6);
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,190 @@
+.questionPage {
+    max-width: var(--max-width-narrow);
+    margin: 0 auto;
+    padding: var(--space-12) var(--space-6);
+}
+
+.backLink {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    color: var(--color-ink-muted);
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--space-6);
+    text-decoration: none;
+}
+
+.backLink:hover {
+    color: var(--color-primary);
+}
+
+.questionHeader {
+    margin-bottom: var(--space-8);
+}
+
+.questionMeta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin-bottom: var(--space-4);
+    flex-wrap: wrap;
+}
+
+.questionText {
+    font-size: var(--font-size-2xl);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: var(--line-height-tight);
+    margin-bottom: var(--space-4);
+}
+
+.questionStatus {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--font-size-sm);
+    color: var(--color-ink-muted);
+}
+
+.answerSection {
+    background: var(--color-bg-card);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--color-border-light);
+    padding: var(--space-8);
+    margin-bottom: var(--space-8);
+}
+
+.answerBadges {
+    display: flex;
+    gap: var(--space-2);
+    margin-bottom: var(--space-4);
+}
+
+.answerText {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-relaxed);
+    color: var(--color-ink);
+    white-space: pre-wrap;
+}
+
+.pendingState {
+    text-align: center;
+    padding: var(--space-12);
+    background: var(--color-warning-light);
+    border-radius: var(--radius-xl);
+    margin-bottom: var(--space-8);
+}
+
+.pendingIcon {
+    font-size: 3rem;
+    margin-bottom: var(--space-4);
+}
+
+.pendingTitle {
+    color: #92400E;
+    margin-bottom: var(--space-3);
+}
+
+.pendingMessage {
+    color: #92400E;
+    font-size: var(--font-size-sm);
+}
+
+.actionsBar {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    margin-bottom: var(--space-8);
+}
+
+.voteBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-4);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-full);
+    background: var(--color-bg-card);
+    cursor: pointer;
+    font-size: var(--font-size-sm);
+    transition: all var(--transition-fast);
+}
+
+.voteBtn:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary-dark);
+}
+
+.voteBtn.voted {
+    background: var(--color-primary-light);
+    border-color: var(--color-primary);
+    color: var(--color-primary-dark);
+}
+
+.followUpSection {
+    margin-top: var(--space-8);
+}
+
+.followUpList {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    margin-bottom: var(--space-6);
+}
+
+.followUpItem {
+    padding: var(--space-4);
+    background: var(--color-bg-alt);
+    border-radius: var(--radius-lg);
+    font-size: var(--font-size-sm);
+}
+
+.followUpTime {
+    color: var(--color-ink-muted);
+    font-size: var(--font-size-xs);
+    margin-top: var(--space-2);
+}
+
+.followUpForm {
+    display: flex;
+    gap: var(--space-3);
+    align-items: flex-start;
+}
+
+.followUpForm textarea {
+    flex: 1;
+}
+
+.relatedSection {
+    margin-top: var(--space-12);
+    padding-top: var(--space-8);
+    border-top: 1px solid var(--color-border-light);
+}
+
+.relatedGrid {
+    display: grid;
+    gap: var(--space-4);
+    margin-top: var(--space-6);
+}
+
+.relatedLink {
+    padding: var(--space-4);
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-lg);
+    text-decoration: none;
+    color: var(--color-ink);
+    font-size: var(--font-size-sm);
+    display: block;
+    transition: all var(--transition-fast);
+}
+
+.relatedLink:hover {
+    border-color: var(--color-primary);
+    background: var(--color-primary-light);
+}
+
+.notFound {
+    text-align: center;
+    padding: var(--space-20) var(--space-6);
+}

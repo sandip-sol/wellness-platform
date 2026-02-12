@@ -1,0 +1,339 @@
+[
+    {
+        "id": "path-consent",
+        "title": "Consent & Boundaries",
+        "description": "Understand what consent truly means, learn to set healthy boundaries, and build respectful relationships.",
+        "icon": "🤝",
+        "levels": {
+            "beginner": {
+                "title": "Understanding Consent",
+                "modules": [
+                    {
+                        "id": "c1",
+                        "title": "What is Consent?",
+                        "summary": "Consent is a clear, enthusiastic, ongoing 'yes' — not the absence of 'no'. Learn the basics.",
+                        "duration": "5 min"
+                    },
+                    {
+                        "id": "c2",
+                        "title": "Consent in Indian Context",
+                        "summary": "Navigating consent within arranged marriages, family expectations, and cultural norms.",
+                        "duration": "7 min"
+                    },
+                    {
+                        "id": "c3",
+                        "title": "Saying No (and Hearing No)",
+                        "summary": "How to decline respectfully and accept refusal without pressure or guilt.",
+                        "duration": "5 min"
+                    }
+                ]
+            },
+            "intermediate": {
+                "title": "Practicing Consent",
+                "modules": [
+                    {
+                        "id": "c4",
+                        "title": "Consent Scripts for Couples",
+                        "summary": "Ready-to-use phrases for checking in with your partner during intimacy.",
+                        "duration": "6 min"
+                    },
+                    {
+                        "id": "c5",
+                        "title": "Digital Consent",
+                        "summary": "Consent around sharing photos, messages, and digital boundaries.",
+                        "duration": "5 min"
+                    },
+                    {
+                        "id": "c6",
+                        "title": "When Consent Gets Complicated",
+                        "summary": "Alcohol, power dynamics, and situations where consent may be unclear.",
+                        "duration": "8 min"
+                    }
+                ]
+            },
+            "advanced": {
+                "title": "Advocacy & Support",
+                "modules": [
+                    {
+                        "id": "c7",
+                        "title": "Supporting Survivors",
+                        "summary": "How to be a supportive friend or partner to someone who has experienced violation.",
+                        "duration": "7 min"
+                    },
+                    {
+                        "id": "c8",
+                        "title": "Legal Framework in India",
+                        "summary": "Understanding POCSO, IPC sections, and available legal resources.",
+                        "duration": "10 min"
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "id": "path-communication",
+        "title": "Communication & Relationships",
+        "description": "Learn to talk about intimacy, build emotional connection, and navigate relationship challenges.",
+        "icon": "💬",
+        "levels": {
+            "beginner": {
+                "title": "Opening Up",
+                "modules": [
+                    {
+                        "id": "r1",
+                        "title": "Why Talking About Sex Matters",
+                        "summary": "How communication about intimacy strengthens relationships and improves wellbeing.",
+                        "duration": "5 min"
+                    },
+                    {
+                        "id": "r2",
+                        "title": "Starting the Conversation",
+                        "summary": "Gentle ways to initiate discussion about needs, desires, and boundaries.",
+                        "duration": "6 min"
+                    },
+                    {
+                        "id": "r3",
+                        "title": "Active Listening in Intimacy",
+                        "summary": "How to truly hear your partner without judgement or defensiveness.",
+                        "duration": "5 min"
+                    }
+                ]
+            },
+            "intermediate": {
+                "title": "Deepening Connection",
+                "modules": [
+                    {
+                        "id": "r4",
+                        "title": "Love Languages & Intimacy",
+                        "summary": "Understanding how different love languages affect sexual connection.",
+                        "duration": "7 min"
+                    },
+                    {
+                        "id": "r5",
+                        "title": "Conflict Resolution for Couples",
+                        "summary": "Handling disagreements about intimacy without causing harm.",
+                        "duration": "8 min"
+                    },
+                    {
+                        "id": "r6",
+                        "title": "Navigating Desire Differences",
+                        "summary": "When partners have different levels of desire — and what to do about it.",
+                        "duration": "7 min"
+                    }
+                ]
+            },
+            "advanced": {
+                "title": "Long-term Growth",
+                "modules": [
+                    {
+                        "id": "r7",
+                        "title": "Reigniting After a Dry Spell",
+                        "summary": "Practical strategies for couples who feel disconnected.",
+                        "duration": "8 min"
+                    },
+                    {
+                        "id": "r8",
+                        "title": "Intimacy After Life Changes",
+                        "summary": "Navigating intimacy after babies, illness, stress, or aging.",
+                        "duration": "9 min"
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "id": "path-sexual-health",
+        "title": "Sexual Health Basics",
+        "description": "Essential knowledge about STIs, testing, contraception, and knowing when to see a doctor.",
+        "icon": "🏥",
+        "levels": {
+            "beginner": {
+                "title": "Health Foundations",
+                "modules": [
+                    {
+                        "id": "h1",
+                        "title": "STIs: What You Need to Know",
+                        "summary": "Common STIs, symptoms, and why regular testing matters.",
+                        "duration": "8 min"
+                    },
+                    {
+                        "id": "h2",
+                        "title": "Contraception Options in India",
+                        "summary": "A clear guide to all available methods — from condoms to IUDs.",
+                        "duration": "10 min"
+                    },
+                    {
+                        "id": "h3",
+                        "title": "When to See a Doctor",
+                        "summary": "Red flags, normal variations, and how to find sexual health services in India.",
+                        "duration": "6 min"
+                    }
+                ]
+            },
+            "intermediate": {
+                "title": "Going Deeper",
+                "modules": [
+                    {
+                        "id": "h4",
+                        "title": "Reproductive Health for All Genders",
+                        "summary": "Menstrual health, hormonal changes, and reproductive wellness.",
+                        "duration": "8 min"
+                    },
+                    {
+                        "id": "h5",
+                        "title": "Safe Practices Beyond Basics",
+                        "summary": "Dental dams, regular testing schedules, and partner notification.",
+                        "duration": "7 min"
+                    }
+                ]
+            },
+            "advanced": {
+                "title": "Advocacy & Access",
+                "modules": [
+                    {
+                        "id": "h6",
+                        "title": "Navigating Healthcare in India",
+                        "summary": "Government programs, affordable clinics, and your rights as a patient.",
+                        "duration": "8 min"
+                    },
+                    {
+                        "id": "h7",
+                        "title": "HIV in India: Facts & Support",
+                        "summary": "Living with HIV, PrEP access, and destigmatizing treatment.",
+                        "duration": "9 min"
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "id": "path-anxiety",
+        "title": "Anxiety, Shame & Expectations",
+        "description": "Address performance anxiety, body shame, and unrealistic expectations around sex.",
+        "icon": "🧠",
+        "levels": {
+            "beginner": {
+                "title": "Understanding Your Feelings",
+                "modules": [
+                    {
+                        "id": "a1",
+                        "title": "Where Sexual Shame Comes From",
+                        "summary": "Cultural, religious, and societal sources of shame — and why it's not your fault.",
+                        "duration": "7 min"
+                    },
+                    {
+                        "id": "a2",
+                        "title": "Pornography vs. Reality",
+                        "summary": "How unrealistic portrayals create harmful expectations.",
+                        "duration": "6 min"
+                    },
+                    {
+                        "id": "a3",
+                        "title": "Body Image & Self-acceptance",
+                        "summary": "Learning to appreciate your body as it is.",
+                        "duration": "6 min"
+                    }
+                ]
+            },
+            "intermediate": {
+                "title": "Building Confidence",
+                "modules": [
+                    {
+                        "id": "a4",
+                        "title": "Managing Performance Anxiety",
+                        "summary": "Practical techniques for calming nerves and being present.",
+                        "duration": "7 min"
+                    },
+                    {
+                        "id": "a5",
+                        "title": "Healing from Negative Experiences",
+                        "summary": "Moving forward after bad experiences or violations.",
+                        "duration": "8 min"
+                    }
+                ]
+            },
+            "advanced": {
+                "title": "Seeking Support",
+                "modules": [
+                    {
+                        "id": "a6",
+                        "title": "When to See a Therapist",
+                        "summary": "Signs that professional support would help, and how to find one in India.",
+                        "duration": "7 min"
+                    },
+                    {
+                        "id": "a7",
+                        "title": "Couples Therapy & Sexual Wellbeing",
+                        "summary": "How couples counselling can transform intimacy.",
+                        "duration": "8 min"
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "id": "path-lgbtqia",
+        "title": "LGBTQIA+ Inclusive Wellness",
+        "description": "Safe, affirming information on sexual health, identity, coming out, and building community.",
+        "icon": "🌈",
+        "levels": {
+            "beginner": {
+                "title": "Understanding Identity",
+                "modules": [
+                    {
+                        "id": "l1",
+                        "title": "Understanding Sexual Orientation",
+                        "summary": "A compassionate guide to identities on the spectrum.",
+                        "duration": "6 min"
+                    },
+                    {
+                        "id": "l2",
+                        "title": "Gender Identity Basics",
+                        "summary": "Sex, gender, and expression — understanding the differences.",
+                        "duration": "6 min"
+                    },
+                    {
+                        "id": "l3",
+                        "title": "LGBTQIA+ History in India",
+                        "summary": "From ancient texts to Section 377 repeal — a proud history.",
+                        "duration": "7 min"
+                    }
+                ]
+            },
+            "intermediate": {
+                "title": "Health & Safety",
+                "modules": [
+                    {
+                        "id": "l4",
+                        "title": "Safe Practices for LGBTQIA+ Individuals",
+                        "summary": "Health guidance tailored to diverse sexual practices.",
+                        "duration": "8 min"
+                    },
+                    {
+                        "id": "l5",
+                        "title": "Coming Out Safely",
+                        "summary": "Practical advice for navigating coming out in the Indian context.",
+                        "duration": "7 min"
+                    }
+                ]
+            },
+            "advanced": {
+                "title": "Community & Rights",
+                "modules": [
+                    {
+                        "id": "l6",
+                        "title": "Legal Rights in India",
+                        "summary": "Marriage, adoption, workplace protections — where we stand.",
+                        "duration": "8 min"
+                    },
+                    {
+                        "id": "l7",
+                        "title": "Finding Support & Community",
+                        "summary": "Organizations, helplines, and safe spaces in India.",
+                        "duration": "6 min"
+                    }
+                ]
+            }
+        }
+    }
+]

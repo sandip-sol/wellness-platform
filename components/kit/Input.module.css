@@ -1,0 +1,96 @@
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.label {
+    font-weight: 600;
+    font-size: var(--font-size-sm);
+    color: var(--color-ink);
+}
+
+.required {
+    color: var(--color-danger);
+    margin-left: 2px;
+}
+
+.input,
+.textarea,
+.select {
+    width: 100%;
+    padding: var(--space-3) var(--space-4);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-bg-card);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-normal);
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+    outline: none;
+}
+
+.input:focus,
+.textarea:focus,
+.select:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(46, 196, 182, 0.12);
+}
+
+.input::placeholder,
+.textarea::placeholder {
+    color: var(--color-ink-muted);
+}
+
+.textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%234A4A5A' d='M6 8.825L.375 3.2l.85-.85L6 7.125l4.775-4.775.85.85z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right var(--space-4) center;
+    padding-right: var(--space-10);
+    cursor: pointer;
+}
+
+.helperText {
+    font-size: var(--font-size-xs);
+    color: var(--color-ink-muted);
+    line-height: var(--line-height-normal);
+}
+
+.error .input,
+.error .textarea,
+.error .select {
+    border-color: var(--color-danger);
+}
+
+.error .input:focus,
+.error .textarea:focus,
+.error .select:focus {
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.12);
+}
+
+.errorText {
+    font-size: var(--font-size-xs);
+    color: var(--color-danger);
+    font-weight: 500;
+}
+
+.charCount {
+    font-size: var(--font-size-xs);
+    color: var(--color-ink-muted);
+    text-align: right;
+}
+
+.charCountWarn {
+    color: var(--color-warning);
+}
+
+.charCountDanger {
+    color: var(--color-danger);
+}

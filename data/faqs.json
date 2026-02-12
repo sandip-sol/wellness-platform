@@ -1,0 +1,187 @@
+[
+    {
+        "id": "faq-1",
+        "question": "Is it normal to not want sex sometimes?",
+        "answer": "Absolutely. Sexual desire naturally fluctuates due to stress, health, medication, life changes, and many other factors. Low desire at times is completely normal and doesn't indicate a problem with you or your relationship. If it persists and bothers you, consider speaking with a healthcare provider.",
+        "category": "mental-wellbeing",
+        "tags": [
+            "desire",
+            "libido",
+            "normal-variation"
+        ],
+        "whenToSeekHelp": "If low desire persists for months and causes you distress, or if it's accompanied by depression or relationship conflict, consider consulting a therapist or doctor.",
+        "slug": "is-it-normal-to-not-want-sex-sometimes",
+        "helpfulCount": 24,
+        "status": "published"
+    },
+    {
+        "id": "faq-2",
+        "question": "How do I talk to my partner about what I like and don't like?",
+        "answer": "Start by choosing a calm, non-sexual moment. Use 'I' statements ('I feel good when...' rather than 'You never...'). Be specific but gentle. You can also use our Couples Check-in tool to start structured conversations. Remember: your partner can't read your mind, and honest communication almost always strengthens relationships.",
+        "category": "relationships",
+        "tags": [
+            "communication",
+            "couples",
+            "preferences"
+        ],
+        "whenToSeekHelp": "If every attempt at communication leads to conflict, or if you feel unsafe expressing your needs, couples counselling can provide a safe space.",
+        "slug": "how-to-talk-to-partner-about-preferences",
+        "helpfulCount": 31,
+        "status": "published"
+    },
+    {
+        "id": "faq-3",
+        "question": "What are the signs of an STI?",
+        "answer": "Common signs include: unusual discharge, pain during urination, sores or bumps on genitals, itching, or unusual rashes. However, many STIs (like chlamydia or HPV) can be completely asymptomatic. The only reliable way to know is to get tested.",
+        "category": "sexual-health",
+        "tags": [
+            "STI",
+            "symptoms",
+            "testing"
+        ],
+        "whenToSeekHelp": "If you notice any unusual symptoms, get tested immediately. Even without symptoms, sexually active people should get tested regularly — at least once a year, or after each new partner.",
+        "emergencyRedFlags": "Severe pelvic pain, high fever with genital symptoms, or any symptom in a pregnant person requires immediate medical attention.",
+        "slug": "signs-of-sti",
+        "helpfulCount": 42,
+        "status": "published"
+    },
+    {
+        "id": "faq-4",
+        "question": "How does consent work in a long-term relationship?",
+        "answer": "Consent is required every single time, regardless of relationship duration. Being in a relationship doesn't create a standing 'yes'. Check in with your partner, respect their mood and boundaries, and remember that consent can be withdrawn at any time. Healthy couples communicate openly about this.",
+        "category": "consent",
+        "tags": [
+            "consent",
+            "relationships",
+            "marriage"
+        ],
+        "whenToSeekHelp": "If your partner consistently ignores your boundaries or pressures you, this is a form of abuse. Contact Women Helpline (181) or iCall (9152987821) for support.",
+        "slug": "consent-in-long-term-relationship",
+        "helpfulCount": 38,
+        "status": "published"
+    },
+    {
+        "id": "faq-5",
+        "question": "Is watching pornography normal? Is it harmful?",
+        "answer": "Many adults watch pornography. Occasional, mindful consumption is not inherently harmful. However, problems arise when it becomes compulsive, replaces real intimacy, creates unrealistic expectations, or is used to cope with stress. Pornography is performance — it doesn't represent real sex, real bodies, or real consent.",
+        "category": "mental-wellbeing",
+        "tags": [
+            "pornography",
+            "expectations",
+            "habits"
+        ],
+        "whenToSeekHelp": "If you feel you can't stop watching despite wanting to, if it's affecting your relationships, or if you need increasingly extreme content to feel aroused, speaking with a therapist can help.",
+        "slug": "is-watching-pornography-normal",
+        "helpfulCount": 19,
+        "status": "published"
+    },
+    {
+        "id": "faq-6",
+        "question": "Where can I get tested for STIs in India?",
+        "answer": "Options include: 1) Government hospitals and PHCs (often free or low-cost), 2) NACO-supported Integrated Counselling and Testing Centres (ICTCs), 3) Private pathology labs like Thyrocare, Dr Lal PathLabs, or SRL Diagnostics (₹500-2000), 4) NGOs like FPAI clinics. Testing is confidential.",
+        "category": "sexual-health",
+        "tags": [
+            "STI",
+            "testing",
+            "India",
+            "clinics"
+        ],
+        "whenToSeekHelp": "If your test is positive, treatment is available. Most bacterial STIs are curable with antibiotics. Viral STIs like HIV and herpes are manageable with proper care. Don't delay.",
+        "slug": "where-to-get-sti-testing-india",
+        "helpfulCount": 55,
+        "status": "published"
+    },
+    {
+        "id": "faq-7",
+        "question": "How do I know if my relationship is healthy?",
+        "answer": "Healthy relationships are built on: mutual respect, trust, honest communication, support for each other's independence, shared decision-making, and feeling safe. Red flags include: constant criticism, controlling behavior, isolation from friends/family, jealousy as 'love', threats, or any form of physical/emotional violence.",
+        "category": "relationships",
+        "tags": [
+            "healthy-relationships",
+            "red-flags",
+            "safety"
+        ],
+        "whenToSeekHelp": "If you recognize red flags in your relationship, reaching out to a trusted person or helpline is an important first step. Vandrevala Foundation Helpline: 1860-2662-345 (24/7).",
+        "slug": "how-to-know-relationship-healthy",
+        "helpfulCount": 47,
+        "status": "published"
+    },
+    {
+        "id": "faq-8",
+        "question": "What contraception options are available in India?",
+        "answer": "India offers many options: 1) Male condoms (widely available, ₹5-50), 2) Female condoms, 3) Combined oral pills (Mala-D free at government clinics), 4) Emergency contraception (i-pill, over-the-counter), 5) IUDs like Copper-T (free at government hospitals), 6) Injectable contraceptives (DMPA/Antara), 7) Permanent methods (tubectomy/vasectomy). Consult a doctor to find the best fit for you.",
+        "category": "contraception",
+        "tags": [
+            "contraception",
+            "India",
+            "birth-control",
+            "options"
+        ],
+        "whenToSeekHelp": "Consult a gynecologist if you experience side effects from contraception, or need help choosing the right method. Government clinics offer free family planning counselling.",
+        "slug": "contraception-options-india",
+        "helpfulCount": 63,
+        "status": "published"
+    },
+    {
+        "id": "faq-9",
+        "question": "I'm LGBTQIA+ — where can I find support in India?",
+        "answer": "Several organizations offer safe, confidential support: 1) iCall (9152987821) — counselling in multiple languages, 2) The Humsafar Trust (Mumbai), 3) Sangama (Bangalore), 4) Naz Foundation (Delhi), 5) Swabhava (Bangalore). Online communities like Gaysi Family and Pink List India can also provide connection and resources.",
+        "category": "lgbtqia",
+        "tags": [
+            "LGBTQIA",
+            "support",
+            "India",
+            "helplines"
+        ],
+        "whenToSeekHelp": "If you're experiencing discrimination, violence, or mental health challenges related to your identity, reaching out to any of these organizations is a strong, brave step.",
+        "slug": "lgbtqia-support-india",
+        "helpfulCount": 51,
+        "status": "published"
+    },
+    {
+        "id": "faq-10",
+        "question": "Is it normal to feel anxious before or during sex?",
+        "answer": "Yes, sexual anxiety is very common — especially early in a relationship, after a break, or following a negative experience. Performance anxiety affects all genders. Deep breathing, focusing on sensation rather than performance, and communicating with your partner can help. Remember: sex isn't a performance; it's a shared experience.",
+        "category": "mental-wellbeing",
+        "tags": [
+            "anxiety",
+            "performance",
+            "nervousness"
+        ],
+        "whenToSeekHelp": "If anxiety consistently prevents you from enjoying intimacy or causes avoidance, a sex therapist or counsellor can offer targeted, effective strategies.",
+        "slug": "normal-to-feel-anxious-about-sex",
+        "helpfulCount": 29,
+        "status": "published"
+    },
+    {
+        "id": "faq-11",
+        "question": "What should I know about periods and sexual health?",
+        "answer": "Menstruation is a normal biological process. Key facts: 1) You can get pregnant during your period, 2) Having sex during periods is safe (hygiene precautions apply), 3) Period irregularities can indicate health issues, 4) Severe period pain (dysmenorrhea) is common but treatable. Track your cycle to understand your body better.",
+        "category": "body-literacy",
+        "tags": [
+            "periods",
+            "menstruation",
+            "reproductive-health"
+        ],
+        "whenToSeekHelp": "See a doctor if: periods are extremely painful, very heavy, last more than 7 days, or if you miss periods for 3+ months (without pregnancy).",
+        "slug": "periods-and-sexual-health",
+        "helpfulCount": 36,
+        "status": "published"
+    },
+    {
+        "id": "faq-12",
+        "question": "How can we improve intimacy in our marriage?",
+        "answer": "Start with communication — use our Couples Check-in tool for structured conversations. Other tips: 1) Schedule quality time (not just sex), 2) Show physical affection daily (hugs, holding hands), 3) Express appreciation, 4) Try new experiences together, 5) Discuss fantasies without judgment, 6) Reduce stress together, 7) Be patient — intimacy grows with trust.",
+        "category": "marriage-intimacy",
+        "tags": [
+            "marriage",
+            "intimacy",
+            "communication",
+            "tips"
+        ],
+        "whenToSeekHelp": "If you've been feeling disconnected for months despite trying, couples therapy can help rebuild closeness. It's a sign of strength, not weakness.",
+        "slug": "improve-intimacy-marriage",
+        "helpfulCount": 44,
+        "status": "published"
+    }
+]
