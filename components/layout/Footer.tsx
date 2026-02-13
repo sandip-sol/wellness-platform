@@ -14,12 +14,7 @@ export default function Footer() {
                             A privacy-first, always-anonymous sexual wellness education platform.
                             Reliable answers. No judgment. India-first context.
                         </p>
-                        <div className={styles.trustPromises}>
-                            <span className={styles.trustItem}>✓ No ads, ever</span>
-                            <span className={styles.trustItem}>✓ No data selling</span>
-                            <span className={styles.trustItem}>✓ No identity required</span>
-                            <span className={styles.trustItem}>✓ Education-first, always</span>
-                        </div>
+
                     </div>
 
                     <div>
@@ -57,9 +52,7 @@ export default function Footer() {
                         © {new Date().getFullYear()} Safe Space. Education, not medical advice.
                     </span>
                     <span className={styles.footerDisclaimer}>
-                        This platform provides sexual wellness education only. It is not a substitute for
-                        professional medical advice, diagnosis, or treatment. Always consult a qualified
-                        healthcare provider. Strictly 18+ only.
+                        Educational only. Not medical advice. Consult a professional. 18+.
                     </span>
                 </div>
             </div>

@@ -2,6 +2,7 @@
 
 import { useLayoutEffect, useRef } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Button from '@/components/kit/Button';
@@ -88,6 +89,17 @@ export default function Home() {
         <div ref={mainRef} className={styles.main}>
             {/* Hero Section */}
             <section ref={heroRef} className={styles.hero}>
+                <div className={styles.heroBackground}>
+                    <Image
+                        src="/hero-background.png"
+                        alt="Serene abstract background"
+                        fill
+                        priority
+                        quality={90}
+                        style={{ objectFit: 'cover' }}
+                    />
+                    <div className={styles.heroOverlay} />
+                </div>
                 <div className={`${styles.heroDecor} hero-blob-1 ${styles.heroBlob1}`} />
                 <div className={`${styles.heroDecor} hero-blob-2 ${styles.heroBlob2}`} />
 

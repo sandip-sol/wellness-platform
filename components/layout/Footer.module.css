@@ -7,14 +7,14 @@
 .footerInner {
     max-width: var(--max-width-wide);
     margin: 0 auto;
-    padding: var(--space-16) var(--space-6) var(--space-8);
+    padding: var(--space-8) var(--space-6) var(--space-6);
 }
 
 .footerGrid {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap: var(--space-12);
-    margin-bottom: var(--space-12);
+    gap: var(--space-8);
+    margin-bottom: var(--space-8);
 }
 
 .footerBrand {
@@ -24,40 +24,28 @@
 .footerLogo {
     font-family: var(--font-heading);
     font-weight: 700;
-    font-size: var(--font-size-2xl);
+    font-size: var(--font-size-xl);
     color: #fff;
-    margin-bottom: var(--space-4);
+    margin-bottom: var(--space-2);
     display: flex;
     align-items: center;
-    gap: var(--space-3);
+    gap: var(--space-2);
 }
 
 .footerTagline {
-    font-size: var(--font-size-sm);
-    line-height: var(--line-height-relaxed);
-    margin-bottom: var(--space-6);
-}
-
-.trustPromises {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-2);
-}
-
-.trustItem {
     font-size: var(--font-size-xs);
-    display: flex;
-    align-items: center;
-    gap: var(--space-2);
-    color: rgba(255, 255, 255, 0.5);
+    line-height: var(--line-height-relaxed);
+    margin-bottom: var(--space-4);
 }
+
+
 
 .footerTitle {
     font-family: var(--font-heading);
     font-weight: 600;
-    font-size: var(--font-size-sm);
+    font-size: var(--font-size-xs);
     color: #fff;
-    margin-bottom: var(--space-4);
+    margin-bottom: var(--space-2);
     text-transform: uppercase;
     letter-spacing: 0.05em;
 }
@@ -65,11 +53,11 @@
 .footerLinks {
     display: flex;
     flex-direction: column;
-    gap: var(--space-3);
+    gap: var(--space-2);
 }
 
 .footerLink {
-    font-size: var(--font-size-sm);
+    font-size: var(--font-size-xs);
     color: rgba(255, 255, 255, 0.6);
     text-decoration: none;
     transition: color var(--transition-fast);
@@ -81,7 +69,7 @@
 
 .footerBottom {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: var(--space-6);
+    padding-top: var(--space-4);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -97,9 +85,9 @@
 .footerDisclaimer {
     font-size: var(--font-size-xs);
     color: rgba(255, 255, 255, 0.3);
-    max-width: 500px;
+    max-width: 400px;
     text-align: right;
-    line-height: var(--line-height-relaxed);
+    line-height: var(--line-height-tight);
 }
 
 @media (max-width: 768px) {
