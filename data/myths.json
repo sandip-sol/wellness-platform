@@ -3,12 +3,13 @@
         "id": "myth-1",
         "title": "Masturbation causes weakness",
         "myth": "Masturbation leads to physical weakness, memory loss, and poor eyesight.",
-        "fact": "Masturbation is a normal, safe sexual activity. There is zero medical evidence linking it to weakness, memory loss, or vision problems.",
-        "explanation": "This myth is deeply rooted in cultural taboos and has been debunked by every major medical organization including the WHO. Masturbation does not deplete any vital nutrients or energy.",
-        "indiaContext": "In India, this myth is often reinforced through concepts like 'dhat syndrome' — the belief that semen loss causes physical weakness. While the anxiety around it is real and treatable, the physical claims are unfounded.",
+        "fact": "Masturbation is a normal, safe sexual activity. There is no medical evidence linking it to weakness, memory loss, or vision problems.",
+        "explanation": "This myth is often rooted in stigma, shame, and misinformation. Masturbation does not deplete vital nutrients or damage the body. In fact, for many people it can help with stress relief, sleep, and learning about their own body.",
+        "culturalContext": "In many communities, masturbation is treated as taboo, so people may feel guilt or fear after normal sexual behavior. This can increase anxiety and make the myth feel “true,” even though it’s not medically accurate.",
+        "riskFactors": "Shame-based messaging, misinformation from peers/social media, anxiety symptoms misattributed to masturbation, obsessive worry about semen/energy loss, and lack of reliable sex education.",
         "references": [
             "WHO Sexual Health Guidelines",
-            "Indian Journal of Psychiatry, 2013"
+            "Journal of Psychiatry, 2013"
         ],
         "category": "body-literacy",
         "tags": [
@@ -23,7 +24,8 @@
         "myth": "A person cannot get pregnant during their first sexual intercourse.",
         "fact": "Pregnancy can occur any time unprotected vaginal intercourse happens, including the very first time.",
         "explanation": "Ovulation doesn't depend on prior sexual experience. If an egg is available and sperm is present, fertilization can happen — regardless of whether it's the first time or the hundredth.",
-        "indiaContext": "Many young people in India receive limited sex education. The 'first time myth' contributes to unplanned pregnancies, especially in newly married couples who may delay contraception.",
+        "culturalContext": "When people receive limited or inaccurate sex education, “first time” myths can feel believable and lead to contraception being delayed or skipped — which increases the risk of unplanned pregnancy.",
+        "riskFactors": "Unprotected vaginal intercourse, incorrect assumptions about ovulation/fertile window, inconsistent contraception use, lack of access to accurate information, and pressure or rushed decision-making during intimacy.",
         "references": [
             "FOGSI Guidelines on Contraception",
             "NHS UK - Contraception Facts"
@@ -40,8 +42,9 @@
         "title": "Only men enjoy sex",
         "myth": "Sexual pleasure is primarily a male experience; women don't or shouldn't enjoy sex.",
         "fact": "Sexual pleasure is a normal human experience regardless of gender. Women have as much physiological capacity for pleasure as men.",
-        "explanation": "The clitoris has over 8,000 nerve endings — its sole purpose is pleasure. Research consistently shows that sexual satisfaction is important for everyone's wellbeing and relationship quality.",
-        "indiaContext": "In many Indian communities, female sexuality is suppressed or considered shameful. This myth contributes to sexual dissatisfaction and can harm relationships. Open communication about mutual pleasure is key to healthy intimacy.",
+        "explanation": "The clitoris has thousands of nerve endings and its primary role is pleasure. Research shows sexual satisfaction supports wellbeing, relationship quality, and emotional closeness for many people.",
+        "culturalContext": "In many cultures, female sexuality is suppressed or treated as shameful. This can reduce communication, increase dissatisfaction, and make people ignore pain, discomfort, or unmet needs.",
+        "riskFactors": "Stigma around female desire, lack of body literacy, unequal power dynamics, limited consent/communication skills, and prioritizing performance over comfort and connection.",
         "references": [
             "Journal of Sexual Medicine",
             "The Kinsey Institute"
@@ -58,10 +61,11 @@
         "title": "STIs only happen to 'promiscuous' people",
         "myth": "Sexually transmitted infections only affect people who have many sexual partners.",
         "fact": "Anyone who is sexually active can contract an STI, regardless of the number of partners. Even one unprotected encounter carries risk.",
-        "explanation": "STIs are caused by bacteria, viruses, or parasites — they don't discriminate based on morality or partner count. Many STIs like HPV and herpes are extremely common and can be transmitted even with just one partner.",
-        "indiaContext": "Stigma around STIs in India prevents many people from getting tested. Government clinics and many private labs offer confidential and affordable STI testing. Early detection makes treatment much easier.",
+        "explanation": "STIs are caused by bacteria, viruses, or parasites — they don’t reflect morality. Many STIs (like HPV and herpes) are common, and some can spread even when symptoms are not visible.",
+        "culturalContext": "Stigma can stop people from getting tested, talking to partners, or seeking treatment early. Normalizing testing and prevention reduces harm and protects relationships.",
+        "riskFactors": "Unprotected sex, not testing with new partners, multiple partners without barrier protection, untreated infections, relying on symptoms alone, and misinformation about transmission (including oral/skin-to-skin spread).",
         "references": [
-            "NACO India - STI Guidelines",
+            "NACO - STI Guidelines",
             "WHO Fact Sheet on STIs"
         ],
         "category": "sexual-health",
@@ -76,10 +80,11 @@
         "title": "Condoms reduce pleasure significantly",
         "myth": "Using condoms makes sex significantly less pleasurable and isn't worth it.",
         "fact": "Modern condoms are designed to be thin and comfortable. Any minimal reduction in sensation is far outweighed by protection against STIs and unplanned pregnancy.",
-        "explanation": "Ultra-thin condoms, textured options, and proper sizing have made modern condoms highly comfortable. Studies show that satisfaction differences are minimal, and the peace of mind they provide actually improves the overall experience for many couples.",
-        "indiaContext": "Condoms are widely available in India — from pharmacy shops to government distribution programs. Brands offer ultra-thin varieties. The ₹1 Nirodh condom is available free at government health centers.",
+        "explanation": "Proper sizing, lubrication, and options like ultra-thin or textured condoms improve comfort. For many couples, reduced anxiety about pregnancy/STIs can improve overall enjoyment.",
+        "culturalContext": "Some people avoid condoms due to embarrassment, myths about pleasure, or pressure from a partner. Comfort often improves with correct use and a supportive conversation.",
+        "riskFactors": "Incorrect size/fit, no lubrication (more friction), incorrect use (late application/early removal), expired or damaged condoms, and using oil-based products with latex condoms.",
         "references": [
-            "Indian Journal of Medical Research",
+            "Journal of Medical Research",
             "Planned Parenthood"
         ],
         "category": "sexual-health",
@@ -93,18 +98,18 @@
         "id": "myth-6",
         "title": "LGBTQIA+ identities are a Western influence",
         "myth": "Homosexuality and gender diversity are imported from Western culture and are unnatural.",
-        "fact": "Same-sex relationships and gender diversity have been documented throughout Indian history, art, and religious texts for thousands of years.",
-        "explanation": "Ancient Indian texts like the Kamasutra, temple carvings at Khajuraho, and stories from mythology all reference diverse sexualities and gender identities. The Supreme Court of India decriminalized homosexuality in 2018 (Navtej Singh Johar v. Union of India).",
-        "indiaContext": "India has a rich tradition of gender and sexual diversity. The Hijra community has been recognized for centuries. Section 377 was a colonial-era law, not an Indian one. LGBTQIA+ identities are as Indian as any other.",
+        "fact": "Same-sex relationships and gender diversity have been documented across many societies and historical periods, including in South Asian art, literature, and community traditions.",
+        "explanation": "Historical records and cultural artifacts show diverse expressions of sexuality and gender. Also, many laws used to criminalize same-sex relationships were introduced during colonial periods. In 2018, the Supreme Court struck down parts of Section 377 that criminalized consensual same-sex relationships between adults.",
+        "culturalContext": "Gender and sexual diversity have existed locally for a long time, but stigma and misinformation can erase that history. Respect, safety, and equal rights support healthier communities for everyone.",
+        "riskFactors": "Stigma and discrimination, family/social pressure, lack of safe support systems, misinformation about mental health, and fear of seeking healthcare or counseling.",
         "references": [
-            "Supreme Court of India - Navtej Singh Johar v. Union of India, 2018",
-            "Ruth Vanita - Same-Sex Love in India"
+            "Navtej Singh Johar case (2018) - Section 377 judgement",
+            "Ruth Vanita - Same-Sex Love in South Asia"
         ],
         "category": "lgbtqia",
         "tags": [
             "LGBTQIA",
             "history",
-            "India",
             "section-377"
         ]
     },
@@ -112,9 +117,10 @@
         "id": "myth-7",
         "title": "Talking about sex with your partner is awkward and unnecessary",
         "myth": "Good partners should intuitively know what the other person wants without discussing it.",
-        "fact": "Open communication about desires, boundaries, and comfort is the single most important factor in sexual satisfaction and healthy relationships.",
-        "explanation": "Research consistently shows that couples who communicate about sex report higher satisfaction. Nobody is a mind reader — preferences vary widely between people, and they change over time. Talking isn't awkward, it's essential.",
-        "indiaContext": "In many Indian marriages, especially arranged marriages, couples may have never discussed intimacy before being together. Starting with small, respectful conversations can dramatically improve relationship quality. Our Couples Check-in tool is designed to help.",
+        "fact": "Open communication about desires, boundaries, and comfort is one of the strongest predictors of sexual satisfaction and healthy relationships.",
+        "explanation": "Preferences vary between people and change over time. Clear, respectful communication helps partners align expectations, improve consent, and reduce misunderstandings.",
+        "culturalContext": "Many couples grow up without healthy examples of intimacy communication, so conversations can feel uncomfortable at first. Starting small and using respectful language builds trust.",
+        "riskFactors": "Fear of judgment, poor conflict-resolution skills, unequal power dynamics, lack of consent education, and avoiding conversations after negative experiences or pain.",
         "references": [
             "Journal of Marriage and Family Therapy",
             "Gottman Institute Research"
@@ -130,9 +136,10 @@
         "id": "myth-8",
         "title": "Emergency contraception is an 'abortion pill'",
         "myth": "The morning-after pill (emergency contraception) is the same as an abortion pill and terminates pregnancy.",
-        "fact": "Emergency contraception prevents pregnancy from occurring in the first place — it does not terminate an existing pregnancy.",
-        "explanation": "Emergency contraceptive pills (like i-pill or Unwanted 72) work by delaying ovulation or preventing fertilization. They are ineffective once implantation has occurred. They are NOT the same as medical abortion pills (mifepristone/misoprostol).",
-        "indiaContext": "Emergency contraception is available over the counter in India without prescription. It should be taken within 72 hours of unprotected intercourse. It is a backup method, not a regular contraception strategy.",
+        "fact": "Emergency contraception helps prevent pregnancy from occurring — it does not terminate an existing pregnancy.",
+        "explanation": "Emergency contraceptive pills work mainly by delaying ovulation and may prevent fertilization. They do not end an established pregnancy and are different from medical abortion medications.",
+        "culturalContext": "People may avoid emergency contraception due to fear, moral stigma, or misinformation. Accurate information helps people make timely decisions after contraception failure or unprotected sex.",
+        "riskFactors": "Delay in taking the pill (less effective over time), repeated reliance instead of regular contraception, unprotected intercourse during fertile window, vomiting soon after taking (may reduce effectiveness), and lack of follow-up when a period is late.",
         "references": [
             "FOGSI - Emergency Contraception Guidelines",
             "WHO - Emergency Contraception Fact Sheet"
@@ -148,9 +155,10 @@
         "id": "myth-9",
         "title": "Size determines sexual satisfaction",
         "myth": "Genital size is the primary determinant of sexual pleasure and performance.",
-        "fact": "Sexual satisfaction depends on communication, emotional connection, technique, and mutual respect — not on anatomy measurements.",
-        "explanation": "Studies consistently show that genital size has minimal correlation with partner satisfaction. Most nerve endings are concentrated in specific areas, and emotional intimacy, foreplay, and communication are far stronger predictors of enjoyment.",
-        "indiaContext": "Misleading advertisements for 'enlargement' products are rampant in India. These products are medically useless and often harmful. If anxiety about body image is affecting your wellbeing, speaking with a counsellor can help.",
+        "fact": "Sexual satisfaction depends more on communication, comfort, technique, emotional connection, and mutual respect than on anatomy measurements.",
+        "explanation": "Research generally finds weak or no correlation between genital size and partner satisfaction. Foreplay, trust, and responsiveness are stronger predictors of a positive experience.",
+        "culturalContext": "Body-image pressure and misleading marketing can create unnecessary anxiety. Confidence and skills (like communication and consent) matter far more than comparison standards.",
+        "riskFactors": "Body dysmorphia or anxiety, exposure to unrealistic pornography, pressure to “perform,” scams or unsafe “enhancement” products, and avoidance of intimacy due to fear of judgment.",
         "references": [
             "British Journal of Urology International",
             "Journal of Sexual Medicine"
@@ -166,12 +174,13 @@
         "id": "myth-10",
         "title": "Married people can't be sexually assaulted by their spouse",
         "myth": "Marriage implies permanent consent — a spouse cannot refuse sexual activity.",
-        "fact": "Consent is required for every sexual interaction, regardless of marital status. Marital rape is a violation of bodily autonomy.",
-        "explanation": "Every person has the right to say no at any time, including within a marriage. Forced sex within marriage causes the same psychological and physical harm as assault by a stranger. Consent must be freely given each time.",
-        "indiaContext": "While Indian law has not yet fully criminalized marital rape (except for cases involving separated spouses or minors), multiple High Courts and the ongoing legal discourse recognize it as a violation of fundamental rights. Support is available through helplines like Women Helpline 181.",
+        "fact": "Consent is required for every sexual interaction, regardless of marital status. Forced sex is a violation of bodily autonomy.",
+        "explanation": "Consent must be freely given, informed, and reversible at any time. Forced sex within marriage can cause the same physical and psychological harm as assault outside marriage.",
+        "culturalContext": "Some people are taught that marriage removes the need for consent. Healthy relationships depend on mutual respect, safety, and the ability to say no without fear.",
+        "riskFactors": "Coercion or intimidation, financial/social dependency, lack of awareness about consent, normalized control or abuse, and limited access to confidential support services.",
         "references": [
             "Karnataka High Court - RIT Foundation case, 2022",
-            "National Commission for Women India"
+            "National Commission for Women"
         ],
         "category": "consent",
         "tags": [
