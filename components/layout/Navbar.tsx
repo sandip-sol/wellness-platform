@@ -9,7 +9,14 @@ const NAV_LINKS = [
     { href: '/kb', label: 'Knowledge Base' },
     { href: '/myths', label: 'Myth Busters' },
     { href: '/paths', label: 'Learning Paths' },
-    { href: '/couples', label: 'Couples' },
+    {
+        label: 'Survey',
+        children: [
+            { href: '/couples', label: 'Couple' },
+            { href: '/single', label: 'Single' },
+            { href: '/quizzes', label: 'Quizzes' },
+        ]
+    },
     { href: '/journal', label: 'Journal' },
     { href: '/consult', label: 'Expert Help' },
 ];
@@ -30,14 +37,33 @@ export default function Navbar() {
                     </Link>
 
                     <div className={styles.navLinks}>
-                        {NAV_LINKS.map(link => (
-                            <Link
-                                key={link.href}
-                                href={link.href}
-                                className={`${styles.navLink} ${pathname === link.href ? styles.navLinkActive : ''}`}
-                            >
-                                {link.label}
-                            </Link>
+                        {NAV_LINKS.map((link, index) => (
+                            link.children ? (
+                                <div key={index} className={styles.dropdown}>
+                                    <div className={`${styles.navLink} ${styles.dropdownTrigger}`}>
+                                        {link.label} <span className={styles.dropdownArrow}>▼</span>
+                                    </div>
+                                    <div className={styles.dropdownMenu}>
+                                        {link.children.map(child => (
+                                            <Link
+                                                key={child.href}
+                                                href={child.href}
+                                                className={styles.dropdownItem}
+                                            >
+                                                {child.label}
+                                            </Link>
+                                        ))}
+                                    </div>
+                                </div>
+                            ) : (
+                                <Link
+                                    key={link.href}
+                                    href={link.href}
+                                    className={`${styles.navLink} ${pathname === link.href ? styles.navLinkActive : ''}`}
+                                >
+                                    {link.label}
+                                </Link>
+                            )
                         ))}
                     </div>
 
@@ -63,15 +89,33 @@ export default function Navbar() {
             </nav>
 
             <div className={`${styles.mobileMenu} ${mobileOpen ? styles.mobileMenuOpen : ''}`}>
-                {NAV_LINKS.map(link => (
-                    <Link
-                        key={link.href}
-                        href={link.href}
-                        className={styles.mobileNavLink}
-                        onClick={() => setMobileOpen(false)}
-                    >
-                        {link.label}
-                    </Link>
+                {NAV_LINKS.map((link, index) => (
+                    link.children ? (
+                        <div key={index}>
+                            <div className={styles.mobileNavLink}>{link.label}</div>
+                            <div className={styles.mobileSubMenu}>
+                                {link.children.map(child => (
+                                    <Link
+                                        key={child.href}
+                                        href={child.href}
+                                        className={styles.mobileSubItem}
+                                        onClick={() => setMobileOpen(false)}
+                                    >
+                                        {child.label}
+                                    </Link>
+                                ))}
+                            </div>
+                        </div>
+                    ) : (
+                        <Link
+                            key={link.href}
+                            href={link.href}
+                            className={styles.mobileNavLink}
+                            onClick={() => setMobileOpen(false)}
+                        >
+                            {link.label}
+                        </Link>
+                    )
                 ))}
                 <Link
                     href="/privacy"
