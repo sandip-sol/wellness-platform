@@ -11,8 +11,7 @@ export default function Footer() {
                             🌿 Safe Space
                         </div>
                         <p className={styles.footerTagline}>
-                            A privacy-first, always-anonymous sexual wellness education platform.
-                            Reliable answers. No judgment. India-first context.
+                            India-first sexual wellness education, with privacy by design.
                         </p>
 
                     </div>

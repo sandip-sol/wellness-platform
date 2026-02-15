@@ -335,5 +335,82 @@
                 ]
             }
         }
+    },
+    {
+        "id": "kamasutra_wisdom_series",
+        "title": "Kāmasūtra Wisdom for Modern Sexual Wellness",
+        "description": "A culturally grounded course translating Vātsyāyana's 5th-century teachings on ethical intimacy, sensory presence, and relational harmony into actionable practices for contemporary sexual wellness—honoring dharma (ethics), kāma (pleasure), and mindful connection.",
+        "icon": "🧠",
+        "levels": {
+            "beginner": {
+                "title": "Foundations of Ethical Intimacy",
+                "modules": [
+                    {
+                        "id": "k1",
+                        "title": "Consent Before Contact: What the Kāmasūtra Teaches About Enthusiastic Agreement",
+                        "summary": "Explore Vātsyāyana's nuanced consent framework from Book 2, Chapter 3: reading body language cues (leaning in, sustained eye contact), honoring disengagement signals, and the 3-breath pause practice to cultivate somatic awareness alongside verbal consent.",
+                        "duration": "8 min"
+                    },
+                    {
+                        "id": "k2",
+                        "title": "Why Pleasure Needs Purpose: Kāmasūtra's Ethical Framework",
+                        "summary": "Understand how kāma (pleasure) integrates with dharma (duty) and artha (prosperity) in ancient Indian philosophy—reframing sexual wellness as holistic flourishing, not isolated acts.",
+                        "duration": "7 min"
+                    },
+                    {
+                        "id": "k3",
+                        "title": "The Myth of 'Normal' Desire: Kāmasūtra's Inclusive View",
+                        "summary": "Discover how the text acknowledges diverse appetites across genders, ages, and life stages—offering compassionate language for mismatched libidos and cyclical desire patterns.",
+                        "duration": "6 min"
+                    }
+                ]
+            },
+            "intermediate": {
+                "title": "Deepening Sensual Presence",
+                "modules": [
+                    {
+                        "id": "k4",
+                        "title": "The 5-Minute No-Goal Touch Practice (Inspired by Kāmasūtra's 'Preliminaries')",
+                        "summary": "Reclaim touch from performance pressure with this ritual: feather-light strokes, grounding pressure, and breath-synchronized pauses—rooted in Book 2's emphasis on *pūrva-rāga* (preliminary play) as connection, not prelude.",
+                        "duration": "7 min"
+                    },
+                    {
+                        "id": "k5",
+                        "title": "Touch as Meditation: Kāmasūtra's Lost Art of Sensual Presence",
+                        "summary": "Learn how ancient practices of receptive touch—listening with skin, honoring texture (silk, sandalwood), and low-light intimacy—cultivate embodied awareness beyond genital focus.",
+                        "duration": "8 min"
+                    },
+                    {
+                        "id": "k6",
+                        "title": "Scent & Seduction: Perfume-Making as Intimacy Practice",
+                        "summary": "Why Book 1 dedicates chapters to *gandhārva vidyā* (perfumery): blending scents as patience practice, sensory mindfulness, and creating shared olfactory rituals for connection.",
+                        "duration": "6 min"
+                    }
+                ]
+            },
+            "advanced": {
+                "title": "Sustaining Connection & Cultural Wisdom",
+                "modules": [
+                    {
+                        "id": "k7",
+                        "title": "Aftercare, Ancient Style: Kāmasūtra's Rituals for Post-Intimacy Bonding",
+                        "summary": "Three neurobiologically aligned practices from *anuvārtana* (the gentle return): shared hydration (*jala sparśa*), palm rest on heart space (*hasta viśrāma*), and witnessed appreciation—honoring the oxytocin window after intimacy.",
+                        "duration": "7 min"
+                    },
+                    {
+                        "id": "k8",
+                        "title": "Not Your Exotic Fantasy: Ethical Engagement with South Asian Wisdom",
+                        "summary": "A practitioner's checklist: citing specific Sanskrit terms/books, avoiding temple-carving imagery, collaborating with South Asian educators, and distinguishing Kāmasūtra from Khajuraho art or colonial distortions.",
+                        "duration": "9 min"
+                    },
+                    {
+                        "id": "k9",
+                        "title": "Digital Intimacy, Ancient Wisdom: Applying Kāmasūtra to Modern Connection",
+                        "summary": "Adapting *icchā* (spontaneous desire) and *samprayoga* (mutual inclination) to sexting ethics, video-date presence, and creating sacred digital space without performance pressure.",
+                        "duration": "8 min"
+                    }
+                ]
+            }
+        }
     }
 ]
