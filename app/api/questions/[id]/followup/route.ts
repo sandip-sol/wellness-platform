@@ -19,7 +19,7 @@ export async function POST(request, { params }) {
         }
 
         const sessionTokenHash = sessionToken ? hashToken(sessionToken) : 'anonymous';
-        const followUp = addFollowUp(id, { text: safety.cleanText, sessionTokenHash });
+        const followUp = await addFollowUp(id, { text: safety.cleanText, sessionTokenHash });
 
         if (!followUp) {
             return NextResponse.json({ error: 'Question not found.' }, { status: 404 });

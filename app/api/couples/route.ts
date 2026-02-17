@@ -18,7 +18,7 @@ export async function POST(request) {
         }
 
         const sessionTokenHash = sessionToken ? hashToken(sessionToken) : 'anonymous';
-        const result = submitCouplesCheckin({ sessionTokenHash, responses });
+        const result = await submitCouplesCheckin({ sessionTokenHash, responses });
 
         return NextResponse.json(result, { status: 201 });
     } catch (error) {

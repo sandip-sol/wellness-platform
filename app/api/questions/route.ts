@@ -41,7 +41,7 @@ export async function POST(request) {
 
         const sessionTokenHash = sessionToken ? hashToken(sessionToken) : 'anonymous';
 
-        const question = createQuestion({
+        const question = await createQuestion({
             category,
             tags: tags || [],
             text: safety.cleanText,
@@ -76,14 +76,14 @@ export async function GET(request) {
     const type = searchParams.get('type');
 
     if (type === 'published') {
-        const qas = getPublishedQAs({
+        const qas = await getPublishedQAs({
             category: category || undefined,
             search: searchParams.get('search') || undefined,
         });
         return NextResponse.json({ questions: qas });
     }
 
-    const questions = getQuestions({
+    const questions = await getQuestions({
         status: status || undefined,
         category: category || undefined,
     });

@@ -9,7 +9,7 @@ export async function POST(request, { params }) {
         const { sessionToken } = body;
 
         const sessionTokenHash = sessionToken ? hashToken(sessionToken) : 'anonymous';
-        const success = voteHelpful(id, sessionTokenHash);
+        const success = await voteHelpful(id, sessionTokenHash);
 
         if (!success) {
             return NextResponse.json({ error: 'Already voted or question not found.' }, { status: 400 });
