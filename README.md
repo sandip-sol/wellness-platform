@@ -71,7 +71,9 @@ safe-space/
 
 ## 🛡️ Privacy Policy
 
-Safe Space is committed to specialized privacy. We do not store personal identifiable information (PII) for casual browsing. All journal entries are stored locally on your device.
+Safe Space is committed to specialized privacy. We don’t intentionally collect identity/PII. All journal entries are stored locally on your device.
+
+> **Note:** Configure your deployment platform's logs (e.g., Vercel, AWS) if you truly want "no IP logging" at the infrastructure level.
 
 ## 📜 License
 

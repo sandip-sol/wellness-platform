@@ -12,7 +12,7 @@ export async function POST(request) {
         }
 
         const sessionTokenHash = sessionToken ? hashToken(sessionToken) : 'anonymous';
-        const entry = createJournalEntry({ sessionTokenHash, entryText, moodTag, prompt });
+        const entry = await createJournalEntry({ sessionTokenHash, entryText, moodTag, prompt });
 
         return NextResponse.json({ entry }, { status: 201 });
     } catch (error) {
@@ -25,7 +25,7 @@ export async function GET(request) {
     const sessionToken = searchParams.get('token');
     const sessionTokenHash = sessionToken ? hashToken(sessionToken) : 'anonymous';
 
-    const entries = getJournalEntries(sessionTokenHash);
+    const entries = await getJournalEntries(sessionTokenHash);
     return NextResponse.json({ entries });
 }
 
@@ -34,6 +34,6 @@ export async function DELETE(request) {
     const sessionToken = searchParams.get('token');
     const sessionTokenHash = sessionToken ? hashToken(sessionToken) : 'anonymous';
 
-    deleteJournalEntries(sessionTokenHash);
+    await deleteJournalEntries(sessionTokenHash);
     return NextResponse.json({ success: true });
 }

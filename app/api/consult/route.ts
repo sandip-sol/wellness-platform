@@ -12,7 +12,7 @@ export async function POST(request) {
         }
 
         const sessionTokenHash = sessionToken ? hashToken(sessionToken) : 'anonymous';
-        const consult = createConsult({
+        const consult = await createConsult({
             sessionTokenHash,
             topic,
             urgency: urgency || 'normal',

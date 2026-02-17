@@ -9,19 +9,19 @@ export async function GET(request) {
     const search = searchParams.get('search');
 
     if (slug) {
-        const qa = getPublishedQABySlug(slug);
+        const qa = await getPublishedQABySlug(slug);
         if (!qa) {
             return NextResponse.json({ error: 'Q&A not found.' }, { status: 404 });
         }
         // Get related QAs
-        const related = getPublishedQAs({ category: qa.category })
+        const related = (await getPublishedQAs({ category: qa.category }))
             .filter(q => q.id !== qa.id)
             .slice(0, 4);
         return NextResponse.json({ qa, related });
     }
 
-    const qas = getPublishedQAs({ category: category || undefined, search: search || undefined });
-    const categories = getCategories();
+    const qas = await getPublishedQAs({ category: category || undefined, search: search || undefined });
+    const categories = await getCategories();
 
     return NextResponse.json({ qas, categories });
 }
