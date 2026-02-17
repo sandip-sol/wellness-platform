@@ -1,0 +1,238 @@
+[
+    {
+        "id": "anxiety-check",
+        "title": "Anxiety Check",
+        "description": "A quick assessment to understand your current anxiety levels.",
+        "questions": [
+            {
+                "id": "q1",
+                "text": "Over the last 2 weeks, how often have you been bothered by feeling nervous, anxious, or on edge?",
+                "options": [
+                    {
+                        "text": "Not at all",
+                        "score": 0
+                    },
+                    {
+                        "text": "Several days",
+                        "score": 1
+                    },
+                    {
+                        "text": "More than half the days",
+                        "score": 2
+                    },
+                    {
+                        "text": "Nearly every day",
+                        "score": 3
+                    }
+                ]
+            },
+            {
+                "id": "q2",
+                "text": "Over the last 2 weeks, how often have you been bothered by not being able to stop or control worrying?",
+                "options": [
+                    {
+                        "text": "Not at all",
+                        "score": 0
+                    },
+                    {
+                        "text": "Several days",
+                        "score": 1
+                    },
+                    {
+                        "text": "More than half the days",
+                        "score": 2
+                    },
+                    {
+                        "text": "Nearly every day",
+                        "score": 3
+                    }
+                ]
+            },
+            {
+                "id": "q3",
+                "text": "Over the last 2 weeks, how often have you been bothered by worrying too much about different things?",
+                "options": [
+                    {
+                        "text": "Not at all",
+                        "score": 0
+                    },
+                    {
+                        "text": "Several days",
+                        "score": 1
+                    },
+                    {
+                        "text": "More than half the days",
+                        "score": 2
+                    },
+                    {
+                        "text": "Nearly every day",
+                        "score": 3
+                    }
+                ]
+            },
+            {
+                "id": "q4",
+                "text": "Over the last 2 weeks, how often have you been bothered by trouble relaxing?",
+                "options": [
+                    {
+                        "text": "Not at all",
+                        "score": 0
+                    },
+                    {
+                        "text": "Several days",
+                        "score": 1
+                    },
+                    {
+                        "text": "More than half the days",
+                        "score": 2
+                    },
+                    {
+                        "text": "Nearly every day",
+                        "score": 3
+                    }
+                ]
+            }
+        ],
+        "results": [
+            {
+                "minScore": 0,
+                "maxScore": 4,
+                "title": "Minimal Anxiety",
+                "description": "Your results suggest minimal anxiety. Continue practicing good self-care and stress management techniques."
+            },
+            {
+                "minScore": 5,
+                "maxScore": 9,
+                "title": "Mild Anxiety",
+                "description": "Your results suggest mild anxiety. Consider incorporating relaxation techniques and monitoring your stress levels."
+            },
+            {
+                "minScore": 10,
+                "maxScore": 14,
+                "title": "Moderate Anxiety",
+                "description": "Your results suggest moderate anxiety. It may be helpful to speak with a mental health professional for support."
+            },
+            {
+                "minScore": 15,
+                "maxScore": 21,
+                "title": "Severe Anxiety",
+                "description": "Your results suggest severe anxiety. We strongly recommend reaching out to a mental health professional for a comprehensive assessment and support."
+            }
+        ]
+    },
+    {
+        "id": "relationship-health",
+        "title": "Relationship Health Assessment",
+        "description": "Evaluate the health of your relationship and identify areas for growth.",
+        "questions": [
+            {
+                "id": "q1",
+                "text": "I feel comfortable sharing my feelings with my partner.",
+                "options": [
+                    {
+                        "text": "Always",
+                        "score": 3
+                    },
+                    {
+                        "text": "Often",
+                        "score": 2
+                    },
+                    {
+                        "text": "Sometimes",
+                        "score": 1
+                    },
+                    {
+                        "text": "Rarely",
+                        "score": 0
+                    }
+                ]
+            },
+            {
+                "id": "q2",
+                "text": "We handle conflicts in a constructive way.",
+                "options": [
+                    {
+                        "text": "Always",
+                        "score": 3
+                    },
+                    {
+                        "text": "Often",
+                        "score": 2
+                    },
+                    {
+                        "text": "Sometimes",
+                        "score": 1
+                    },
+                    {
+                        "text": "Rarely",
+                        "score": 0
+                    }
+                ]
+            },
+            {
+                "id": "q3",
+                "text": "I feel supported by my partner in my personal goals.",
+                "options": [
+                    {
+                        "text": "Always",
+                        "score": 3
+                    },
+                    {
+                        "text": "Often",
+                        "score": 2
+                    },
+                    {
+                        "text": "Sometimes",
+                        "score": 1
+                    },
+                    {
+                        "text": "Rarely",
+                        "score": 0
+                    }
+                ]
+            },
+            {
+                "id": "q4",
+                "text": "We spend quality time together regularly.",
+                "options": [
+                    {
+                        "text": "Always",
+                        "score": 3
+                    },
+                    {
+                        "text": "Often",
+                        "score": 2
+                    },
+                    {
+                        "text": "Sometimes",
+                        "score": 1
+                    },
+                    {
+                        "text": "Rarely",
+                        "score": 0
+                    }
+                ]
+            }
+        ],
+        "results": [
+            {
+                "minScore": 0,
+                "maxScore": 4,
+                "title": "Needs Attention",
+                "description": "Your relationship may benefit from open communication and possibly professional guidance to address underlying issues."
+            },
+            {
+                "minScore": 5,
+                "maxScore": 8,
+                "title": "Fair Health",
+                "description": "There are some strong points, but also areas that could be improved with intentional effort and communication."
+            },
+            {
+                "minScore": 9,
+                "maxScore": 12,
+                "title": "Healthy Relationship",
+                "description": "Your relationship appears to be strong and healthy. Keep nurturing your connection and communication."
+            }
+        ]
+    }
+]
