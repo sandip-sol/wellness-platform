@@ -1,38 +1,61 @@
-'use client';
-import { useState, useEffect } from 'react';
-import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import Badge from '@/components/kit/Badge';
 import Button from '@/components/kit/Button';
 import Alert from '@/components/kit/Alert';
+import { getPublishedQABySlug, getPublishedQAs } from '@/lib/store';
+import { notFound } from 'next/navigation';
 
-export default function QAPage() {
-    const { slug } = useParams();
-    const [qa, setQa] = useState(null);
-    const [related, setRelated] = useState([]);
-    const [loading, setLoading] = useState(true);
+// Dynamic metadata for SEO
+export async function generateMetadata({ params }) {
+    const { slug } = await params;
+    const qa = await getPublishedQABySlug(slug);
+    if (!qa) return { title: 'Not Found — Safe Space' };
 
-    useEffect(() => {
-        fetchQA();
-    }, [slug]);
-
-    const fetchQA = async () => {
-        try {
-            const res = await fetch(`/api/kb?slug=${slug}`);
-            if (res.ok) {
-                const data = await res.json();
-                setQa(data.qa);
-                setRelated(data.related || []);
-            }
-        } catch (err) { console.error(err); }
-        finally { setLoading(false); }
+    return {
+        title: `${qa.question} — Safe Space Knowledge Base`,
+        description: qa.answer.slice(0, 160),
+        openGraph: {
+            title: qa.question,
+            description: qa.answer.slice(0, 160),
+            type: 'article',
+        },
     };
+}
 
-    if (loading) return <div style={{ padding: '5rem', textAlign: 'center' }}>Loading...</div>;
-    if (!qa) return <div style={{ padding: '5rem', textAlign: 'center' }}><h2>Not Found</h2><Button href="/kb">Browse Knowledge Base</Button></div>;
+export default async function QAPage({ params }) {
+    const { slug } = await params;
+    const qa = await getPublishedQABySlug(slug);
+
+    if (!qa) notFound();
+
+    const related = (await getPublishedQAs({ category: qa.category }))
+        .filter(q => q.id !== qa.id)
+        .slice(0, 4);
+
+    // FAQ JSON-LD structured data
+    const faqSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+            {
+                '@type': 'Question',
+                name: qa.question,
+                acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: qa.answer,
+                },
+            },
+        ],
+    };
 
     return (
         <div style={{ maxWidth: '800px', margin: '0 auto', padding: 'var(--space-12) var(--space-6)' }}>
+            {/* FAQ JSON-LD for Google rich results */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+            />
+
             <Link href="/kb" style={{ color: 'var(--color-ink-muted)', fontSize: 'var(--font-size-sm)', display: 'inline-block', marginBottom: 'var(--space-6)' }}>← Back to Knowledge Base</Link>
 
             <div style={{ display: 'flex', gap: 'var(--space-2)', marginBottom: 'var(--space-4)', flexWrap: 'wrap' }}>

@@ -8,6 +8,14 @@ import Alert from '@/components/kit/Alert';
 import Tabs from '@/components/kit/Tabs';
 
 export default function ModeratePage() {
+    // ===== AUTH STATE =====
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
+    const [authChecking, setAuthChecking] = useState(true);
+    const [password, setPassword] = useState('');
+    const [authError, setAuthError] = useState('');
+    const [loggingIn, setLoggingIn] = useState(false);
+
+    // ===== MODERATION STATE =====
     const [queue, setQueue] = useState([]);
     const [loading, setLoading] = useState(true);
     const [activeQuestion, setActiveQuestion] = useState(null);
@@ -17,8 +25,57 @@ export default function ModeratePage() {
     const [processing, setProcessing] = useState(false);
     const [allQuestions, setAllQuestions] = useState([]);
 
-    useEffect(() => { fetchData(); }, []);
+    // Check auth on mount
+    useEffect(() => {
+        checkAuth();
+    }, []);
 
+    const checkAuth = async () => {
+        try {
+            const res = await fetch('/api/admin/check');
+            const data = await res.json();
+            setIsAuthenticated(data.authenticated);
+            if (data.authenticated) fetchData();
+        } catch {
+            setIsAuthenticated(false);
+        } finally {
+            setAuthChecking(false);
+        }
+    };
+
+    const handleLogin = async (e) => {
+        e.preventDefault();
+        setLoggingIn(true);
+        setAuthError('');
+        try {
+            const res = await fetch('/api/admin/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ password }),
+            });
+            if (res.ok) {
+                setIsAuthenticated(true);
+                setPassword('');
+                fetchData();
+            } else {
+                const data = await res.json();
+                setAuthError(data.error || 'Invalid password.');
+            }
+        } catch {
+            setAuthError('Login failed. Please try again.');
+        } finally {
+            setLoggingIn(false);
+        }
+    };
+
+    const handleLogout = async () => {
+        await fetch('/api/admin/logout', { method: 'POST' });
+        setIsAuthenticated(false);
+        setQueue([]);
+        setAllQuestions([]);
+    };
+
+    // ===== DATA FETCHING =====
     const fetchData = async () => {
         try {
             const [modRes, allRes] = await Promise.all([
@@ -36,7 +93,7 @@ export default function ModeratePage() {
     const handleModerate = async (id, action) => {
         setProcessing(true);
         try {
-            await fetch(`/api/questions/${id}/moderate`, {
+            const res = await fetch(`/api/questions/${id}/moderate`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
@@ -46,6 +103,10 @@ export default function ModeratePage() {
                     reviewBadge: reviewBadge || undefined,
                 }),
             });
+            if (res.status === 401) {
+                setIsAuthenticated(false);
+                return;
+            }
             setActiveQuestion(null);
             setAnswerText('');
             setEditedText('');
@@ -54,6 +115,76 @@ export default function ModeratePage() {
         setProcessing(false);
     };
 
+    // ===== AUTH LOADING =====
+    if (authChecking) {
+        return <div style={{ padding: '5rem', textAlign: 'center' }}>Checking authentication...</div>;
+    }
+
+    // ===== LOGIN FORM =====
+    if (!isAuthenticated) {
+        return (
+            <div style={{ maxWidth: '420px', margin: '0 auto', padding: 'var(--space-12) var(--space-6)' }}>
+                <div style={{ textAlign: 'center', marginBottom: 'var(--space-8)' }}>
+                    <h1 style={{ marginBottom: 'var(--space-2)' }}>🔒 Admin Login</h1>
+                    <p style={{ color: 'var(--color-ink-muted)' }}>
+                        Enter the admin password to access the moderation console.
+                    </p>
+                </div>
+
+                <Card>
+                    <form onSubmit={handleLogin}>
+                        <div style={{ marginBottom: 'var(--space-4)' }}>
+                            <label
+                                htmlFor="admin-password"
+                                style={{
+                                    display: 'block',
+                                    marginBottom: 'var(--space-2)',
+                                    fontWeight: 600,
+                                    fontSize: 'var(--font-size-sm)',
+                                }}
+                            >
+                                Password
+                            </label>
+                            <input
+                                id="admin-password"
+                                type="password"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                                placeholder="Enter admin password"
+                                autoFocus
+                                style={{
+                                    width: '100%',
+                                    padding: 'var(--space-3) var(--space-4)',
+                                    border: '2px solid var(--color-border)',
+                                    borderRadius: 'var(--radius-lg)',
+                                    fontSize: 'var(--font-size-base)',
+                                    background: 'var(--color-bg-card)',
+                                    outline: 'none',
+                                    transition: 'border-color var(--transition-fast)',
+                                }}
+                                onFocus={(e) => e.target.style.borderColor = 'var(--color-primary)'}
+                                onBlur={(e) => e.target.style.borderColor = 'var(--color-border)'}
+                            />
+                        </div>
+
+                        {authError && (
+                            <Alert variant="danger" title="Login Failed">
+                                {authError}
+                            </Alert>
+                        )}
+
+                        <div style={{ marginTop: 'var(--space-4)' }}>
+                            <Button type="submit" fullWidth loading={loggingIn}>
+                                Sign In
+                            </Button>
+                        </div>
+                    </form>
+                </Card>
+            </div>
+        );
+    }
+
+    // ===== MODERATION CONSOLE (existing UI) =====
     const pendingItems = allQuestions.filter(q => q.status === 'pending');
     const approvedItems = allQuestions.filter(q => q.status === 'approved');
     const publishedItems = allQuestions.filter(q => q.status === 'published');
@@ -123,7 +254,7 @@ export default function ModeratePage() {
                     <h1 style={{ marginBottom: 'var(--space-2)' }}>Moderation Console</h1>
                     <p style={{ color: 'var(--color-ink-muted)' }}>Review, approve, and publish Q&As</p>
                 </div>
-                <div style={{ display: 'flex', gap: 'var(--space-3)' }}>
+                <div style={{ display: 'flex', gap: 'var(--space-3)', alignItems: 'center' }}>
                     <Card compact style={{ textAlign: 'center', minWidth: '80px' }}>
                         <div style={{ fontWeight: 700, fontSize: 'var(--font-size-2xl)', fontFamily: 'var(--font-heading)' }}>{pendingItems.length}</div>
                         <div style={{ fontSize: 'var(--font-size-xs)', color: 'var(--color-ink-muted)' }}>Pending</div>
@@ -132,6 +263,9 @@ export default function ModeratePage() {
                         <div style={{ fontWeight: 700, fontSize: 'var(--font-size-2xl)', fontFamily: 'var(--font-heading)' }}>{allQuestions.length}</div>
                         <div style={{ fontSize: 'var(--font-size-xs)', color: 'var(--color-ink-muted)' }}>Total</div>
                     </Card>
+                    <Button variant="ghost" size="sm" onClick={handleLogout}>
+                        🔓 Logout
+                    </Button>
                 </div>
             </div>
 
