@@ -1,135 +1,121 @@
 'use client';
-import { useState } from 'react';
+
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import styles from './Navbar.module.css';
-import Button from '@/components/kit/Button';
+import { Menu, X } from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { buttonVariants } from '@/components/ws/WsButton';
 
-const NAV_LINKS = [
-    { href: '/kb', label: 'Knowledge Base' },
-    { href: '/myths', label: 'Myth Busters' },
-    { href: '/paths', label: 'Learning Paths' },
-    {
-        label: 'Survey',
-        children: [
-            { href: '/couples', label: 'Couple' },
-            { href: '/single', label: 'Single' },
-            { href: '/quizzes', label: 'Quizzes' },
-        ]
-    },
-    { href: '/journal', label: 'Journal' },
-    { href: '/consult', label: 'Expert Help' },
+const NAV_LINKS: Array<{ label: string; href: string }> = [
+  { label: 'Learn', href: '/learn' },
+  { label: 'Knowledge Base', href: '/kb' },
+  { label: 'Myths', href: '/myths' },
+  { label: 'Paths', href: '/paths' },
+  { label: 'Quizzes', href: '/quizzes' },
 ];
 
 export default function Navbar() {
-    const [mobileOpen, setMobileOpen] = useState(false);
-    const pathname = usePathname();
+  const pathname = usePathname();
+  const [scrolled, setScrolled] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
-    return (
-        <>
-            <nav className={styles.navbar}>
-                <div className={styles.navInner}>
-                    <Link href="/" className={styles.logo} onClick={() => setMobileOpen(false)}>
-                        <div className={styles.logoIcon}>🌿</div>
-                        <div>
-                            <div className={styles.logoText}>Safe Space</div>
-                        </div>
-                    </Link>
+  useEffect(() => {
+    const handler = () => setScrolled(window.scrollY > 20);
+    handler();
+    window.addEventListener('scroll', handler, { passive: true });
+    return () => window.removeEventListener('scroll', handler);
+  }, []);
 
-                    <div className={styles.navLinks}>
-                        {NAV_LINKS.map((link, index) => (
-                            link.children ? (
-                                <div key={index} className={styles.dropdown}>
-                                    <div className={`${styles.navLink} ${styles.dropdownTrigger}`}>
-                                        {link.label} <span className={styles.dropdownArrow}>▼</span>
-                                    </div>
-                                    <div className={styles.dropdownMenu}>
-                                        {link.children.map(child => (
-                                            <Link
-                                                key={child.href}
-                                                href={child.href}
-                                                className={styles.dropdownItem}
-                                            >
-                                                {child.label}
-                                            </Link>
-                                        ))}
-                                    </div>
-                                </div>
-                            ) : (
-                                <Link
-                                    key={link.href}
-                                    href={link.href}
-                                    className={`${styles.navLink} ${pathname === link.href ? styles.navLinkActive : ''}`}
-                                >
-                                    {link.label}
-                                </Link>
-                            )
-                        ))}
-                    </div>
+  useEffect(() => setMobileOpen(false), [pathname]);
 
-                    <div className={styles.navActions}>
-                        <Link href="/privacy" className={styles.navLink}>
-                            🔒 Privacy
-                        </Link>
-                        <Button href="/ask" size="sm">
-                            Ask Anonymously
-                        </Button>
-                    </div>
+  return (
+    <header
+      className={cn(
+        'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
+        scrolled ? 'bg-cream/95 backdrop-blur-sm border-b border-border' : 'bg-cream/80 backdrop-blur-sm'
+      )}
+    >
+      {/* Announcement Bar */}
+      <div className="announcement-bar text-center py-2 px-4 text-xs sm:text-sm">
+        🌿 Anonymous • Evidence-informed • Safe space for everyone ✨
+      </div>
 
-                    <button
-                        className={`${styles.hamburger} ${mobileOpen ? styles.hamburgerOpen : ''}`}
-                        onClick={() => setMobileOpen(!mobileOpen)}
-                        aria-label="Toggle menu"
-                    >
-                        <span className={styles.hamburgerLine} />
-                        <span className={styles.hamburgerLine} />
-                        <span className={styles.hamburgerLine} />
-                    </button>
-                </div>
-            </nav>
+      {/* Main Nav */}
+      <nav className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16">
+        {/* Logo */}
+        <Link href="/" className="font-serif text-xl font-semibold text-warm-charcoal tracking-tight">
+          Safe Space
+        </Link>
 
-            <div className={`${styles.mobileMenu} ${mobileOpen ? styles.mobileMenuOpen : ''}`}>
-                {NAV_LINKS.map((link, index) => (
-                    link.children ? (
-                        <div key={index}>
-                            <div className={styles.mobileNavLink}>{link.label}</div>
-                            <div className={styles.mobileSubMenu}>
-                                {link.children.map(child => (
-                                    <Link
-                                        key={child.href}
-                                        href={child.href}
-                                        className={styles.mobileSubItem}
-                                        onClick={() => setMobileOpen(false)}
-                                    >
-                                        {child.label}
-                                    </Link>
-                                ))}
-                            </div>
-                        </div>
-                    ) : (
-                        <Link
-                            key={link.href}
-                            href={link.href}
-                            className={styles.mobileNavLink}
-                            onClick={() => setMobileOpen(false)}
-                        >
-                            {link.label}
-                        </Link>
-                    )
-                ))}
+        {/* Desktop links */}
+        <div className="hidden md:flex items-center gap-1">
+          {NAV_LINKS.map((l) => {
+            const active = pathname === l.href || pathname?.startsWith(l.href + '/');
+            return (
+              <Link
+                key={l.href}
+                href={l.href}
+                className={cn(
+                  'px-3 py-2 rounded-full text-sm font-medium transition-colors',
+                  active ? 'bg-beige text-warm-charcoal' : 'text-warm-secondary hover:text-warm-charcoal hover:bg-beige/70'
+                )}
+              >
+                {l.label}
+              </Link>
+            );
+          })}
+        </div>
+
+        {/* Desktop CTA */}
+        <div className="hidden md:flex items-center gap-3">
+          <Link
+            href="/ask"
+            className={cn(buttonVariants({ variant: 'primary', size: 'sm' }), 'shadow-sm')}
+          >
+            Ask Anonymously
+          </Link>
+        </div>
+
+        {/* Mobile menu button */}
+        <button
+          className="md:hidden inline-flex items-center justify-center rounded-full p-2 border border-border bg-background"
+          aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
+          onClick={() => setMobileOpen((v) => !v)}
+        >
+          {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+        </button>
+      </nav>
+
+      {/* Mobile drawer */}
+      {mobileOpen && (
+        <div className="md:hidden border-t border-border bg-cream/95 backdrop-blur-sm">
+          <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-2">
+            {NAV_LINKS.map((l) => {
+              const active = pathname === l.href || pathname?.startsWith(l.href + '/');
+              return (
                 <Link
-                    href="/privacy"
-                    className={styles.mobileNavLink}
-                    onClick={() => setMobileOpen(false)}
+                  key={l.href}
+                  href={l.href}
+                  className={cn(
+                    'px-4 py-3 rounded-2xl text-sm font-medium border border-border',
+                    active ? 'bg-beige text-warm-charcoal' : 'bg-background text-warm-secondary hover:text-warm-charcoal'
+                  )}
                 >
-                    🔒 Privacy & Safety
+                  {l.label}
                 </Link>
-                <div className={styles.mobileCta}>
-                    <Button href="/ask" fullWidth onClick={() => setMobileOpen(false)}>
-                        Ask Anonymously
-                    </Button>
-                </div>
-            </div>
-        </>
-    );
+              );
+            })}
+
+            <Link
+              href="/ask"
+              className={cn(buttonVariants({ variant: 'primary', size: 'md' }), 'w-full justify-center mt-2')}
+            >
+              Ask Anonymously
+            </Link>
+          </div>
+        </div>
+      )}
+    </header>
+  );
 }

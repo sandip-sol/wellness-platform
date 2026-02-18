@@ -1,39 +1,51 @@
-import MythCard from '@/components/kit/MythCard';
-import Button from '@/components/kit/Button';
-import Alert from '@/components/kit/Alert';
-import mythsData from '@/data/myths.json';
+import Link from "next/link";
+import MythCard from "@/components/ws/MythCard";
+import { SectionTitle } from "@/components/ws/WsDivider";
+import mythsData from "@/data/myths.json";
 
 export const metadata = {
-    title: 'Myth Busters — Safe Space',
-    description: 'Debunking common sexual health myths with facts, evidence, and India-specific context.',
+  title: "Myth Busters — Safe Space",
+  description:
+    "Debunking common sexual health myths with facts, evidence, and India-specific context.",
 };
 
 export default function MythsPage() {
-    return (
-        <div style={{ maxWidth: 'var(--max-width)', margin: '0 auto', padding: 'var(--space-12) var(--space-6)' }}>
-            <div style={{ textAlign: 'center', marginBottom: 'var(--space-12)' }}>
-                <h1 style={{ marginBottom: 'var(--space-3)' }}>Myth Busters</h1>
-                <p style={{ color: 'var(--color-ink-light)', fontSize: 'var(--font-size-lg)', maxWidth: '600px', margin: '0 auto var(--space-6)' }}>
-                    Separating facts from fiction with evidence-based answers and India-specific context.
-                </p>
-                <Alert variant="info" icon="💡">
-                    Every myth-buster is based on peer-reviewed research and guidelines from medical organizations.
-                    Sources are cited at the bottom of each card.
-                </Alert>
-            </div>
+  return (
+    <main className="bg-background min-h-screen pt-28 pb-20">
+      <div className="max-w-6xl mx-auto px-6 lg:px-8">
+        <SectionTitle
+          eyebrow="Myth-busting library"
+          heading="Myth Busters"
+          subtitle="Separating facts from fiction with evidence-based answers and India-specific context."
+          align="center"
+          headingAs="h1"
+          className="mb-10 animate-fade-up"
+        />
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(480px, 100%), 1fr))', gap: 'var(--space-6)' }} className="stagger-children">
-                {mythsData.map(myth => (
-                    <MythCard key={myth.id} myth={myth} />
-                ))}
-            </div>
-
-            <div style={{ textAlign: 'center', marginTop: 'var(--space-12)' }}>
-                <p style={{ color: 'var(--color-ink-muted)', marginBottom: 'var(--space-4)' }}>
-                    Know a myth that should be busted? Let us know.
-                </p>
-                <Button href="/ask">Suggest a Myth →</Button>
-            </div>
+        <div className="bg-beige border border-warm-border rounded-2xl p-6 text-center max-w-2xl mx-auto mb-10">
+          <p className="text-sm text-warm-secondary">
+            💡 Every myth-buster is grounded in reputable guidance and research. Sources are listed inside each card.
+          </p>
         </div>
-    );
+
+        <div className="grid lg:grid-cols-2 gap-6 stagger-children">
+          {mythsData.map((myth) => (
+            <MythCard key={myth.id} myth={myth as any} />
+          ))}
+        </div>
+
+        <div className="text-center mt-12">
+          <p className="text-sm text-muted-foreground mb-4">
+            Know a myth that should be busted? Let us know.
+          </p>
+          <Link
+            href="/ask"
+            className="inline-flex items-center gap-2 bg-primary hover:bg-[hsl(var(--primary-hover))] text-primary-foreground font-semibold px-7 py-3.5 rounded-full text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+          >
+            Suggest a Myth →
+          </Link>
+        </div>
+      </div>
+    </main>
+  );
 }

@@ -8,7 +8,7 @@ import { AgeGuard } from '@/components/safety/AgeGuard';
 import { QuickExit } from '@/components/safety/QuickExit';
 
 import LenisScroll from '@/components/ui/LenisScroll';
-import { Playfair_Display, Lato } from 'next/font/google';
+import { Playfair_Display, Inter } from 'next/font/google';
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -16,8 +16,7 @@ const playfair = Playfair_Display({
   display: 'swap',
 });
 
-const lato = Lato({
-  weight: ['400', '700'],
+const inter = Inter({
   subsets: ['latin'],
   variable: '--font-sans',
   display: 'swap',
@@ -38,10 +37,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`min-h-screen ${playfair.variable} ${lato.variable} font-sans`}>
+      <body className={`min-h-screen ${playfair.variable} ${inter.variable} font-sans`}>
         <LenisScroll>
           <AgeGuard>
             <Navbar />
+            <div aria-hidden="true" className="h-24" />
             <QuickExit />
             <main style={{ minHeight: 'calc(100vh - var(--navbar-height))' }}>{children}</main>
             <Footer />

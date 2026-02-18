@@ -1,252 +1,156 @@
-'use client';
-
-import { useLayoutEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Button from '@/components/kit/Button';
-import Doodle from '@/components/ui/Doodle';
-import styles from './page.module.css';
+import { cn } from '@/lib/utils';
+import { buttonVariants } from '@/components/ws/WsButton';
+import { SectionTitle, WsDivider } from '@/components/ws/WsDivider';
 
-gsap.registerPlugin(ScrollTrigger);
+const quickLinks = [
+  { title: 'Ask Anonymously', description: 'Get evidence-informed guidance without sharing your identity.', href: '/ask' },
+  { title: 'Knowledge Base', description: 'Browse approved answers across key topics and concerns.', href: '/kb' },
+  { title: 'Myth Busters', description: 'Separate stigma from science with simple facts.', href: '/myths' },
+  { title: 'Learning Paths', description: 'Follow structured paths from beginner to advanced.', href: '/paths' },
+];
 
 export default function Home() {
-    const mainRef = useRef(null);
-    const heroRef = useRef(null);
-    const heroTitleRef = useRef(null);
-    const heroSubtitleRef = useRef(null);
-    const heroCtasRef = useRef(null);
+  return (
+    <main>
+      {/* HERO */}
+      <section className="relative py-10 sm:py-14">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid lg:grid-cols-12 gap-10 items-center">
+            <div className="lg:col-span-6">
+              <span className="text-eyebrow">A privacy-first wellness hub</span>
 
-    useLayoutEffect(() => {
-        const ctx = gsap.context(() => {
-            // Hero Animations
-            const tl = gsap.timeline();
+              <h1 className="mt-3 font-serif text-display text-warm-charcoal max-w-xl">
+                A safe space to learn, ask, and build healthier relationships.
+              </h1>
 
-            tl.fromTo(heroTitleRef.current,
-                { y: 50, opacity: 0 },
-                { y: 0, opacity: 1, duration: 1, ease: 'power3.out' }
-            )
-                .fromTo(heroSubtitleRef.current,
-                    { y: 30, opacity: 0 },
-                    { y: 0, opacity: 1, duration: 1, ease: 'power3.out' },
-                    '-=0.6'
-                )
-                .fromTo(heroCtasRef.current,
-                    { y: 20, opacity: 0 },
-                    { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out' },
-                    '-=0.6'
-                );
+              <p className="mt-4 text-subheadline max-w-xl">
+                Anonymous Q&A, myth-busting, learning paths, and gentle self-check tools — designed with respect,
+                consent, and cultural context in mind.
+              </p>
 
-            // Doodle Animations
-            gsap.to('.doodle-float', {
-                y: -15,
-                rotation: 5,
-                duration: 2,
-                repeat: -1,
-                yoyo: true,
-                ease: 'sine.inOut',
-                stagger: {
-                    each: 0.5,
-                    from: 'random'
-                }
-            });
+              <div className="mt-6 flex flex-col sm:flex-row gap-3">
+                <Link href="/ask" className={cn(buttonVariants({ variant: 'primary', size: 'lg' }), 'justify-center')}>
+                  Ask Anonymously
+                </Link>
+                <Link href="/learn" className={cn(buttonVariants({ variant: 'outline', size: 'lg' }), 'justify-center')}>
+                  Start Learning
+                </Link>
+              </div>
 
-            gsap.to('.doodle-rotate', {
-                rotation: 360,
-                duration: 20,
-                repeat: -1,
-                ease: 'linear'
-            });
+              <p className="mt-5 text-xs text-warm-secondary">
+                Educational content only — not medical advice. For urgent concerns or symptoms, consult a qualified clinician.
+              </p>
+            </div>
 
-            // Scroll Indicator Animation
-            gsap.to('.scroll-indicator', {
-                y: 10,
-                repeat: -1,
-                yoyo: true,
-                duration: 1.5,
-                ease: 'power1.inOut'
-            });
-
-            // Parallax Background
-            gsap.to('.hero-blob-1', {
-                yPercent: 20,
-                ease: 'none',
-                scrollTrigger: {
-                    trigger: heroRef.current,
-                    start: 'top top',
-                    end: 'bottom top',
-                    scrub: true
-                }
-            });
-
-        }, mainRef);
-
-        return () => ctx.revert();
-    }, []);
-
-    return (
-        <div ref={mainRef} className={styles.main}>
-            {/* Hero Section */}
-            <section ref={heroRef} className={styles.hero}>
-                <div className={styles.heroBackground}>
-                    <Image
-                        src="/hero-background.png"
-                        alt="Serene abstract background"
-                        fill
-                        priority
-                        quality={90}
-                        style={{ objectFit: 'cover' }}
-                    />
-                    <div className={styles.heroOverlay} />
+            <div className="lg:col-span-6 relative">
+              <div className="relative rounded-3xl border border-border bg-beige/60 p-5 sm:p-6 overflow-hidden">
+                <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-cream">
+                  <Image
+                    src="/illustrations/botanical-hero.png"
+                    alt="Botanical illustration"
+                    fill
+                    priority
+                    className="object-cover"
+                    sizes="(min-width: 1024px) 520px, 100vw"
+                  />
                 </div>
-                <div className={`${styles.heroDecor} hero-blob-1 ${styles.heroBlob1}`} />
-                <div className={`${styles.heroDecor} hero-blob-2 ${styles.heroBlob2}`} />
+                <Image
+                  src="/illustrations/botanical-accent.png"
+                  alt=""
+                  width={380}
+                  height={260}
+                  className="pointer-events-none select-none absolute -bottom-10 -right-10 opacity-70 hidden sm:block"
+                />
+              </div>
+            </div>
+          </div>
 
-                {/* Floating Doodles */}
-                <Doodle variant="star" color="var(--color-accent)" size={48} className="doodle-float doodle-rotate" style={{ position: 'absolute', top: '15%', left: '10%', opacity: 0.6 }} />
-                <Doodle variant="heart" color="var(--color-secondary)" size={32} className="doodle-float" style={{ position: 'absolute', top: '25%', right: '15%', opacity: 0.6 }} />
-                <Doodle variant="spiral" color="var(--color-primary)" size={40} className="doodle-float" style={{ position: 'absolute', bottom: '20%', left: '20%', opacity: 0.5 }} />
-                <Doodle variant="sparkle" color="var(--color-accent)" size={24} className="doodle-float" style={{ position: 'absolute', top: '40%', right: '30%', opacity: 0.4 }} />
-
-                <div className={styles.heroContent}>
-                    <div className={styles.heroEyebrow}>
-                        <span>🔒</span> Anonymous & Secure
-                    </div>
-
-                    <h1 ref={heroTitleRef} className={styles.heroTitle}>
-                        Your Safe Space for <br />
-                        <span className={styles.heroTitleAccent}>Sexual Wellness</span>
-                    </h1>
-
-                    <p ref={heroSubtitleRef} className={styles.heroSubtitle}>
-                        Ask questions anonymously, explore myth-busters, and access expert-backed
-                        knowledge without judgment. A privacy-first platform for India.
-                    </p>
-
-                    <div ref={heroCtasRef} className={styles.heroCtas}>
-                        <Button href="/ask" variant="primary" size="lg">
-                            Ask Anonymously
-                        </Button>
-                        <Button href="/learn" variant="outline" size="lg">
-                            Start Learning
-                        </Button>
-                    </div>
-
-                    <div className={styles.heroFloatingChips}>
-                        <div className={styles.chip}>🏳️‍🌈 LGBTQIA+ Friendly</div>
-                        <div className={styles.chip}>🚫 Zero Data Tracking</div>
-                        <div className={styles.chip}>✅ Expert Verified</div>
-                        <div className={styles.chip}>🇮🇳 India-First Context</div>
-                    </div>
-                </div>
-
-                <div className="scroll-indicator" style={{
-                    position: 'absolute',
-                    bottom: '2rem',
-                    left: '50%',
-                    transform: 'translateX(-50%)',
-                    opacity: 0.6,
-                    cursor: 'pointer'
-                }}>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
-                    </svg>
-                </div>
-            </section>
-
-            {/* Value Props */}
-            <section className={styles.valueProps} style={{ position: 'relative' }}>
-                <Doodle variant="zigzag" color="var(--color-ink-muted)" size={64} className="doodle-float" style={{ position: 'absolute', top: '50%', left: '5%', opacity: 0.1, transform: 'rotate(-45deg)' }} />
-                <Doodle variant="circle" color="var(--color-ink-muted)" size={48} className="doodle-float" style={{ position: 'absolute', top: '20%', right: '5%', opacity: 0.1 }} />
-
-                <div className={styles.valuePropGrid}>
-                    <div className={`${styles.valuePropCard} card-interactive`}>
-                        <span className={styles.valuePropIcon}>🎭</span>
-                        <h3 className={styles.valuePropTitle}>100% Anonymous</h3>
-                        <p className={styles.valuePropDesc}>No signup required. No IP tracking. Your identity remains completely hidden.</p>
-                    </div>
-                    <div className={`${styles.valuePropCard} card-interactive`}>
-                        <span className={styles.valuePropIcon}>🩺</span>
-                        <h3 className={styles.valuePropTitle}>Expert Backed</h3>
-                        <p className={styles.valuePropDesc}>Content reviewed by certified gynecologists and sex educators.</p>
-                    </div>
-                    <div className={`${styles.valuePropCard} card-interactive`}>
-                        <span className={styles.valuePropIcon}>🇮🇳</span>
-                        <h3 className={styles.valuePropTitle}>Culturally Relevant</h3>
-                        <p className={styles.valuePropDesc}>Tailored for the Indian context, addressing local myths and societal norms.</p>
-                    </div>
-                    <div className={`${styles.valuePropCard} card-interactive`}>
-                        <span className={styles.valuePropIcon}>🔒</span>
-                        <h3 className={styles.valuePropTitle}>Privacy First</h3>
-                        <p className={styles.valuePropDesc}>We don't store personal data. Your browsing history is safe here.</p>
-                    </div>
-                </div>
-            </section>
-
-            {/* How It Works */}
-            <section className={styles.howItWorks}>
-                <h2 className={styles.sectionTitle}>How Safe Space Works</h2>
-                <p className={styles.sectionSubtitle}>Get answers in three simple, private steps.</p>
-
-                <div className={styles.stepsGrid}>
-                    <div className={styles.step}>
-                        <div className={styles.stepNumber}>1</div>
-                        <h3 className={styles.stepTitle}>Ask or Search</h3>
-                        <p className={styles.stepDesc}>Post your question anonymously or browse our extensive Knowledge Base.</p>
-                    </div>
-                    <div className={styles.step}>
-                        <div className={styles.stepNumber}>2</div>
-                        <h3 className={styles.stepTitle}>Get Verified Answers</h3>
-                        <p className={styles.stepDesc}>Community answers are moderated, and experts provide verified guidance.</p>
-                    </div>
-                    <div className={styles.step}>
-                        <div className={styles.stepNumber}>3</div>
-                        <h3 className={styles.stepTitle}>Learn & Grow</h3>
-                        <p className={styles.stepDesc}>Follow curated learning paths to understand your body and relationships better.</p>
-                    </div>
-                </div>
-            </section>
-
-            {/* Featured Myths Teaser - Placeholder for dynamic content */}
-            <section className={styles.featuredSection}>
-                <div className={styles.container}>
-                    <h2 className={styles.sectionTitle}>Myth Busters</h2>
-                    <p className={styles.sectionSubtitle}>Separating fact from fiction in Indian sexual wellness.</p>
-                    <div style={{ textAlign: 'center', marginTop: 'var(--space-8)' }}>
-                        <Button href="/myths" variant="secondary">View All Myths</Button>
-                    </div>
-                </div>
-            </section>
-
-            {/* Trust Section */}
-            <section className={styles.trustSection}>
-                <div className={styles.trustGrid}>
-                    <div className={styles.trustCard}>
-                        <div className={styles.trustIcon}>🛡️</div>
-                        <h4 className={styles.trustTitle}>No Logs Policy</h4>
-                    </div>
-                    <div className={styles.trustCard}>
-                        <div className={styles.trustIcon}>🤝</div>
-                        <h4 className={styles.trustTitle}>Community Guidelines</h4>
-                    </div>
-                    <div className={styles.trustCard}>
-                        <div className={styles.trustIcon}>⚡</div>
-                        <h4 className={styles.trustTitle}>Quick Exit</h4>
-                    </div>
-                    <div className={styles.trustCard}>
-                        <div className={styles.trustIcon}>📱</div>
-                        <h4 className={styles.trustTitle}>Mobile Optimized</h4>
-                    </div>
-                </div>
-            </section>
-
-            {/* CTA Banner */}
-            <section className={styles.ctaBanner}>
-                <h2 className={styles.ctaBannerTitle}>Ready to find answers?</h2>
-                <p className={styles.ctaBannerDesc}>Join thousands of others in a safe, judgment-free environment.</p>
-                <Button href="/ask" variant="primary" size="lg">Start Asking Now</Button>
-            </section>
+          <WsDivider decorative />
         </div>
-    );
+      </section>
+
+      {/* QUICK LINKS */}
+      <section>
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-8">
+          <SectionTitle
+            eyebrow="Explore"
+            heading="Start where you are"
+            subtitle="Pick a path — ask a question, read trusted answers, or take a gentle self-check."
+            align="left"
+          />
+
+          <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {quickLinks.map((q) => (
+              <Link
+                key={q.href}
+                href={q.href}
+                className={cn(
+                  'card-interactive rounded-2xl border border-border bg-card p-6',
+                  'hover:border-primary/60'
+                )}
+              >
+                <h3 className="font-serif text-lg text-warm-charcoal">{q.title}</h3>
+                <p className="mt-2 text-sm text-warm-secondary">{q.description}</p>
+                <div className="mt-4 text-sm font-semibold text-warm-charcoal">
+                  Open →
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FEATURE STRIP */}
+      <section className="bg-sage/40 border-y border-border">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-10">
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="rounded-2xl border border-border bg-background/70 p-6">
+              <p className="text-eyebrow">Privacy</p>
+              <h3 className="mt-2 font-serif text-headline">Always anonymous</h3>
+              <p className="mt-2 text-sm text-warm-secondary">
+                No sign-up required to browse. Your session is local and non-identifying.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-border bg-background/70 p-6">
+              <p className="text-eyebrow">Clarity</p>
+              <h3 className="mt-2 font-serif text-headline">Myth-busting</h3>
+              <p className="mt-2 text-sm text-warm-secondary">
+                Evidence-informed explanations in simple language, without shame.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-border bg-background/70 p-6">
+              <p className="text-eyebrow">Support</p>
+              <h3 className="mt-2 font-serif text-headline">When you need it</h3>
+              <p className="mt-2 text-sm text-warm-secondary">
+                If something feels urgent or overwhelming, we encourage professional help.
+              </p>
+              <Link href="/consult" className="inline-block mt-4 text-sm font-semibold text-warm-charcoal hover:underline">
+                Explore expert help →
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FINAL CTA */}
+      <section>
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-14">
+          <div className="rounded-3xl border border-border bg-beige/60 p-8 md:p-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+            <div>
+              <p className="text-eyebrow">Ready?</p>
+              <h2 className="mt-2 font-serif text-headline text-warm-charcoal">Ask your question — no judgment.</h2>
+              <p className="mt-2 text-sm text-warm-secondary max-w-xl">
+                We focus on consent, safety, and respect — with a calm, India-first cultural lens.
+              </p>
+            </div>
+            <Link href="/ask" className={cn(buttonVariants({ variant: 'primary', size: 'lg' }), 'justify-center')}>
+              Ask Anonymously
+            </Link>
+          </div>
+        </div>
+      </section>
+    </main>
+  );
 }

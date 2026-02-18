@@ -1,5 +1,5 @@
 /* ===== GOOGLE FONTS ===== */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -8,29 +8,29 @@
 /* ===== DESIGN TOKENS ===== */
 :root {
   /* Colors - Base */
-  --color-bg: #FDFBF7;
+  --color-bg: hsl(var(--background));
   /* Sand 50 */
-  --color-bg-alt: #F9F5EC;
+  --color-bg-alt: hsl(var(--cream));
   /* Sand 100 */
-  --color-bg-card: #FFFFFF;
-  --color-ink: #1A1A2E;
-  --color-ink-light: #4A4A5A;
-  --color-ink-muted: #8B8B9E;
-  --color-border: #E8E5E0;
-  --color-border-light: #F0EDE8;
+  --color-bg-card: hsl(var(--card));
+  --color-ink: hsl(var(--foreground));
+  --color-ink-light: hsl(var(--warm-secondary));
+  --color-ink-muted: hsl(var(--muted-foreground));
+  --color-border: hsl(var(--border));
+  --color-border-light: hsl(var(--border));
 
   /* Colors - Brand (Wellness Palette) */
-  --color-primary: #2C5F4D;
+  --color-primary: hsl(var(--apricot));
   /* Deep Sage */
-  --color-primary-dark: #244D3F;
-  --color-primary-light: #E9EFE9;
-  --color-secondary: #A4B494;
+  --color-primary-dark: hsl(var(--primary-hover));
+  --color-primary-light: hsl(var(--beige));
+  --color-secondary: hsl(var(--sage));
   /* Soft Sage */
-  --color-secondary-dark: #7A9178;
-  --color-secondary-light: #F4F7F5;
-  --color-accent: #D88C5E;
+  --color-secondary-dark: hsl(var(--sage-text));
+  --color-secondary-light: hsl(var(--sage));
+  --color-accent: hsl(var(--apricot));
   /* Clay */
-  --color-accent-light: #FDEEE6;
+  --color-accent-light: hsl(var(--beige));
 
   /* Colors - Safety Palette */
   --color-success: #22C55E;
@@ -96,7 +96,7 @@
   --max-width: 1200px;
   --max-width-narrow: 800px;
   --max-width-wide: 1400px;
-  --navbar-height: 72px;
+  --navbar-height: 96px;
 }
 
 /* ===== CSS RESET ===== */
@@ -164,20 +164,22 @@ h6 {
   color: var(--color-ink);
 }
 
+/* Default heading sizes (primarily for markdown/blog content).
+   Keep these modest; hero/section titles use the editorial utility classes. */
 h1 {
-  font-size: var(--font-size-5xl);
+  font-size: var(--font-size-4xl);
 }
 
 h2 {
-  font-size: var(--font-size-3xl);
-}
-
-h3 {
   font-size: var(--font-size-2xl);
 }
 
-h4 {
+h3 {
   font-size: var(--font-size-xl);
+}
+
+h4 {
+  font-size: var(--font-size-lg);
 }
 
 a {
@@ -418,33 +420,217 @@ ol {
 /* ===== shadcn/ui tokens (Tailwind) ===== */
 @layer base {
   :root {
-    --background: 40 33% 98%;
-    --foreground: 240 10% 10%;
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 10%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 10%;
-    --primary: 174 84% 31%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 24 95% 53%;
-    --secondary-foreground: 0 0% 100%;
-    --muted: 36 27% 94%;
-    --muted-foreground: 240 5% 40%;
-    --accent: 174 84% 31%;
-    --accent-foreground: 0 0% 100%;
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 36 20% 90%;
-    --input: 36 20% 90%;
-    --ring: 174 84% 31%;
+    /* Core palette */
+    --background: 38 100% 97%;         /* #FFF8EC warm cream */
+    --foreground: 28 10% 16%;          /* #2F2A25 warm charcoal */
+
+    --card: 35 52% 88%;                /* #F4E6CF beige cards */
+    --card-foreground: 28 10% 16%;
+
+    --popover: 38 100% 97%;
+    --popover-foreground: 28 10% 16%;
+
+    --primary: 39 80% 77%;             /* #F3D39C apricot accent */
+    --primary-foreground: 28 10% 16%;
+
+    --primary-hover: 38 72% 70%;       /* #EEC680 deeper hover */
+
+    --secondary: 82 30% 87%;           /* #E6EED6 sage green */
+    --secondary-foreground: 28 10% 16%;
+
+    --muted: 35 52% 88%;               /* beige muted */
+    --muted-foreground: 20 12% 37%;    /* #6A5C52 warm secondary text */
+
+    --accent: 39 80% 77%;
+    --accent-foreground: 28 10% 16%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 38 100% 97%;
+
+    --border: 33 32% 86%;              /* #E7DDCF warm border */
+    --input: 33 32% 86%;
+    --ring: 39 80% 77%;
+
     --radius: 0.75rem;
+
+    /* Semantic extras */
+    --sage: 82 30% 87%;                /* sage band backgrounds */
+    --sage-text: 100 18% 28%;
+    --cream: 38 100% 97%;
+    --beige: 35 52% 88%;
+    --apricot: 39 80% 77%;
+    --apricot-hover: 38 72% 70%;
+    --warm-charcoal: 28 10% 16%;
+    --warm-secondary: 20 12% 37%;
+    --warm-border: 33 32% 86%;
+
+    /* Sidebar (inherit wellness palette) */
+    --sidebar-background: 38 100% 97%;
+    --sidebar-foreground: 28 10% 16%;
+    --sidebar-primary: 39 80% 77%;
+    --sidebar-primary-foreground: 28 10% 16%;
+    --sidebar-accent: 82 30% 87%;
+    --sidebar-accent-foreground: 28 10% 16%;
+    --sidebar-border: 33 32% 86%;
+    --sidebar-ring: 39 80% 77%;
   }
 
+  .dark {
+    --background: 28 15% 10%;
+    --foreground: 38 30% 90%;
+    --card: 28 12% 14%;
+    --card-foreground: 38 30% 90%;
+    --popover: 28 12% 14%;
+    --popover-foreground: 38 30% 90%;
+    --primary: 39 80% 77%;
+    --primary-foreground: 28 10% 16%;
+    --secondary: 82 15% 20%;
+    --secondary-foreground: 38 30% 90%;
+    --muted: 28 12% 18%;
+    --muted-foreground: 35 15% 60%;
+    --accent: 39 60% 60%;
+    --accent-foreground: 28 10% 16%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 38 30% 90%;
+    --border: 28 12% 22%;
+    --input: 28 12% 22%;
+    --ring: 39 80% 77%;
+    --sidebar-background: 28 15% 10%;
+    --sidebar-foreground: 38 30% 90%;
+    --sidebar-primary: 39 80% 77%;
+    --sidebar-primary-foreground: 28 10% 16%;
+    --sidebar-accent: 82 15% 20%;
+    --sidebar-accent-foreground: 38 30% 90%;
+    --sidebar-border: 28 12% 22%;
+    --sidebar-ring: 39 80% 77%;
+  }
+}
+
+@layer base {
   * {
     @apply border-border;
   }
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5 {
+    font-family: 'Playfair Display', Georgia, serif;
+    line-height: 1.25;
+    color: hsl(var(--foreground));
   }
 }
+
+@layer utilities {
+  .font-serif { font-family: 'Playfair Display', Georgia, serif; }
+  .font-sans  { font-family: 'Inter', sans-serif; }
+
+  /* Eyebrow label */
+  .text-eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: hsl(var(--muted-foreground));
+  }
+
+  /* Editorial headline sizes */
+  .text-display {
+    font-family: 'Playfair Display', Georgia, serif;
+    /* Reduced scale to avoid oversized hero headings */
+    font-size: clamp(2rem, 4.2vw, 3.25rem);
+    font-weight: 500;
+    line-height: 1.1;
+  }
+
+  .text-headline {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    font-weight: 500;
+    line-height: 1.2;
+  }
+
+  .text-subheadline {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-weight: 400;
+    line-height: 1.7;
+    color: hsl(var(--muted-foreground));
+  }
+
+  /* Background helpers */
+  .bg-cream  { background-color: hsl(var(--cream)); }
+  .bg-beige  { background-color: hsl(var(--beige)); }
+  .bg-sage   { background-color: hsl(var(--sage)); }
+
+  /* Text helpers */
+  .text-warm-charcoal   { color: hsl(var(--warm-charcoal)); }
+  .text-warm-secondary  { color: hsl(var(--warm-secondary)); }
+
+  /* Apricot fills */
+  .bg-apricot        { background-color: hsl(var(--apricot)); }
+  .border-apricot    { border-color: hsl(var(--apricot)); }
+
+  /* Section divider */
+  .divider-apricot {
+    border-top: 1px solid hsl(var(--apricot) / 0.5);
+  }
+
+  /* Announcement bar */
+  .announcement-bar {
+    background-color: hsl(var(--apricot));
+    color: hsl(var(--warm-charcoal));
+    font-family: 'Inter', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+  }
+
+  /* Card hover lift */
+  .card-hover {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .card-hover:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px -8px hsl(var(--warm-charcoal) / 0.12);
+  }
+
+  /* Gentle fade-in animation */
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease both;
+  }
+
+  /* Progress bar */
+  .quiz-progress-bar {
+    background: hsl(var(--border));
+    height: 4px;
+    border-radius: 99px;
+  }
+  .quiz-progress-fill {
+    background: hsl(var(--apricot));
+    height: 4px;
+    border-radius: 99px;
+    transition: width 0.4s ease;
+  }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ===================================================
+   COMPONENT OVERRIDES
+   =================================================== */
+
+/* Sticky nav shadow only on scroll — handled via JS class */
+.nav-scrolled {
+  box-shadow: 0 2px 16px -4px hsl(var(--warm-charcoal) / 0.08);
+}
+

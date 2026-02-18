@@ -1,6 +1,6 @@
-import styles from './page.module.css';
 import { getPublishedQAs, getCategories } from '@/lib/store';
 import KBClient from './KBClient';
+import { SectionTitle } from '@/components/ws/WsDivider';
 
 export const metadata = {
     title: 'Knowledge Base — Safe Space',
@@ -30,21 +30,25 @@ export default async function KnowledgeBasePage() {
     };
 
     return (
-        <div className={styles.kbPage}>
+        <main className="bg-background min-h-screen pt-28 pb-20">
             {/* FAQ JSON-LD for Google rich results */}
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
             />
 
-            <div className={styles.kbHeader}>
-                <h1 className={styles.kbTitle}>Knowledge Base</h1>
-                <p className={styles.kbSubtitle}>
-                    Expert-reviewed answers to real questions about sexual wellness, health, and relationships.
-                </p>
-            </div>
+            <div className="max-w-3xl mx-auto px-6 lg:px-8">
+                <SectionTitle
+                    eyebrow="Community Q&A"
+                    heading="Knowledge Base"
+                    subtitle="Expert-reviewed answers to real questions about sexual wellness, health, and relationships. Browse by topic or search for keywords."
+                    align="left"
+                    headingAs="h1"
+                    className="mb-10 animate-fade-up"
+                />
 
-            <KBClient initialQAs={qas} categories={categories} />
-        </div>
+                <KBClient initialQAs={qas} categories={categories} />
+            </div>
+        </main>
     );
 }
