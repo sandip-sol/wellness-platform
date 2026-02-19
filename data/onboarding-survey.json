@@ -1,0 +1,264 @@
+{
+    "title": "Personalize Your Journey",
+    "description": "Help us recommend the right content for you. This takes about 2 minutes, and your responses are anonymous.",
+    "questions": [
+        {
+            "id": "q-relationship",
+            "text": "What best describes your current relationship status?",
+            "type": "single",
+            "options": [
+                {
+                    "text": "Single",
+                    "value": "single",
+                    "tags": [
+                        "consent",
+                        "body-literacy",
+                        "mental-wellbeing"
+                    ]
+                },
+                {
+                    "text": "Dating / In a relationship",
+                    "value": "dating",
+                    "tags": [
+                        "relationships",
+                        "consent",
+                        "sexual-health"
+                    ]
+                },
+                {
+                    "text": "Married / Long-term partner",
+                    "value": "married",
+                    "tags": [
+                        "marriage-intimacy",
+                        "relationships",
+                        "sexual-health"
+                    ]
+                },
+                {
+                    "text": "It's complicated",
+                    "value": "complicated",
+                    "tags": [
+                        "mental-wellbeing",
+                        "relationships",
+                        "consent"
+                    ]
+                },
+                {
+                    "text": "Prefer not to say",
+                    "value": "skip",
+                    "tags": []
+                }
+            ]
+        },
+        {
+            "id": "q-interests",
+            "text": "What topics interest you most? (Pick up to 3)",
+            "type": "multi",
+            "maxSelections": 3,
+            "options": [
+                {
+                    "text": "🏥 Sexual health & hygiene",
+                    "value": "health",
+                    "tags": [
+                        "sexual-health"
+                    ],
+                    "pathId": "path-sexual-health"
+                },
+                {
+                    "text": "💬 Communication & relationships",
+                    "value": "communication",
+                    "tags": [
+                        "relationships"
+                    ],
+                    "pathId": "path-communication"
+                },
+                {
+                    "text": "🤝 Consent & boundaries",
+                    "value": "consent",
+                    "tags": [
+                        "consent"
+                    ],
+                    "pathId": "path-consent"
+                },
+                {
+                    "text": "🧠 Anxiety, shame & body image",
+                    "value": "anxiety",
+                    "tags": [
+                        "mental-wellbeing"
+                    ],
+                    "pathId": "path-anxiety"
+                },
+                {
+                    "text": "🌈 LGBTQIA+ wellness",
+                    "value": "lgbtqia",
+                    "tags": [
+                        "lgbtqia"
+                    ],
+                    "pathId": "path-lgbtqia"
+                },
+                {
+                    "text": "💊 Contraception & planning",
+                    "value": "contraception",
+                    "tags": [
+                        "contraception"
+                    ]
+                },
+                {
+                    "text": "📜 Ancient texts & cultural wisdom",
+                    "value": "literature",
+                    "tags": [
+                        "body-literacy"
+                    ],
+                    "pathId": "kamasutra_wisdom_series"
+                },
+                {
+                    "text": "💑 Marriage & long-term intimacy",
+                    "value": "marriage",
+                    "tags": [
+                        "marriage-intimacy"
+                    ],
+                    "pathId": "path-communication"
+                }
+            ]
+        },
+        {
+            "id": "q-knowledge",
+            "text": "How would you rate your current knowledge about sexual wellness?",
+            "type": "single",
+            "options": [
+                {
+                    "text": "🌱 Beginner — I'm just starting to learn",
+                    "value": "beginner",
+                    "level": "beginner"
+                },
+                {
+                    "text": "🌿 Intermediate — I know the basics",
+                    "value": "intermediate",
+                    "level": "intermediate"
+                },
+                {
+                    "text": "🌳 Advanced — I'm fairly well-informed",
+                    "value": "advanced",
+                    "level": "advanced"
+                },
+                {
+                    "text": "🤷 Not sure",
+                    "value": "unsure",
+                    "level": "beginner"
+                }
+            ]
+        },
+        {
+            "id": "q-learning-style",
+            "text": "How do you prefer to learn?",
+            "type": "single",
+            "options": [
+                {
+                    "text": "📖 Reading articles & guides",
+                    "value": "reading",
+                    "recommend": [
+                        "learn",
+                        "kb"
+                    ]
+                },
+                {
+                    "text": "❓ Q&A — asking and browsing questions",
+                    "value": "qa",
+                    "recommend": [
+                        "ask",
+                        "kb"
+                    ]
+                },
+                {
+                    "text": "📝 Self-reflection quizzes & journals",
+                    "value": "reflection",
+                    "recommend": [
+                        "quizzes",
+                        "journal"
+                    ]
+                },
+                {
+                    "text": "🗺️ Structured learning paths",
+                    "value": "structured",
+                    "recommend": [
+                        "paths",
+                        "learn"
+                    ]
+                },
+                {
+                    "text": "🎭 A mix of everything",
+                    "value": "mix",
+                    "recommend": [
+                        "paths",
+                        "kb",
+                        "quizzes"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "q-comfort",
+            "text": "How comfortable are you discussing topics related to sexuality?",
+            "type": "single",
+            "options": [
+                {
+                    "text": "😰 Very uncomfortable — I need a gentle approach",
+                    "value": "low",
+                    "comfortLevel": 1
+                },
+                {
+                    "text": "😊 Somewhat comfortable — I'm getting there",
+                    "value": "medium",
+                    "comfortLevel": 2
+                },
+                {
+                    "text": "💪 Very comfortable — I can handle direct language",
+                    "value": "high",
+                    "comfortLevel": 3
+                }
+            ]
+        },
+        {
+            "id": "q-goal",
+            "text": "What's your main goal right now?",
+            "type": "single",
+            "options": [
+                {
+                    "text": "Learn something new about my body or health",
+                    "value": "learn-health",
+                    "tags": [
+                        "sexual-health",
+                        "body-literacy"
+                    ]
+                },
+                {
+                    "text": "Improve my relationship or communication",
+                    "value": "improve-relationship",
+                    "tags": [
+                        "relationships",
+                        "marriage-intimacy"
+                    ]
+                },
+                {
+                    "text": "Work through anxiety or shame",
+                    "value": "overcome-anxiety",
+                    "tags": [
+                        "mental-wellbeing"
+                    ]
+                },
+                {
+                    "text": "Get answers to specific questions",
+                    "value": "get-answers",
+                    "tags": [
+                        "sexual-health"
+                    ]
+                },
+                {
+                    "text": "Just explore — no specific goal",
+                    "value": "explore",
+                    "tags": []
+                }
+            ]
+        }
+    ]
+}

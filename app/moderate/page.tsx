@@ -24,6 +24,9 @@ export default function ModeratePage() {
     const [editedText, setEditedText] = useState('');
     const [processing, setProcessing] = useState(false);
     const [allQuestions, setAllQuestions] = useState([]);
+    const [whenToSeekHelp, setWhenToSeekHelp] = useState('');
+    const [emergencyRedFlags, setEmergencyRedFlags] = useState('');
+    const [sources, setSources] = useState('');
 
     // Check auth on mount
     useEffect(() => {
@@ -101,6 +104,9 @@ export default function ModeratePage() {
                     answer: answerText || undefined,
                     editedText: editedText || undefined,
                     reviewBadge: reviewBadge || undefined,
+                    whenToSeekHelp: whenToSeekHelp || undefined,
+                    emergencyRedFlags: emergencyRedFlags || undefined,
+                    sources: sources || undefined,
                 }),
             });
             if (res.status === 401) {
@@ -110,6 +116,9 @@ export default function ModeratePage() {
             setActiveQuestion(null);
             setAnswerText('');
             setEditedText('');
+            setWhenToSeekHelp('');
+            setEmergencyRedFlags('');
+            setSources('');
             fetchData();
         } catch (err) { console.error(err); }
         setProcessing(false);
@@ -302,6 +311,27 @@ export default function ModeratePage() {
                             />
                         </div>
 
+                        {/* Enriched Publishing Fields */}
+                        <div style={{ marginTop: 'var(--space-6)', padding: 'var(--space-4)', background: 'var(--color-bg-alt)', borderRadius: 'var(--radius-md)' }}>
+                            <p style={{ fontSize: 'var(--font-size-sm)', fontWeight: 600, marginBottom: 'var(--space-3)', color: 'var(--color-ink-muted)' }}>📋 Publishing Enrichment (for Publish to KB)</p>
+
+                            <Textarea label="⚠️ When to Seek Help" name="whenToSeekHelp" value={whenToSeekHelp}
+                                onChange={e => setWhenToSeekHelp(e.target.value)}
+                                placeholder="e.g. If symptoms persist for more than 48 hours, consult a doctor…" rows={3} />
+
+                            <div style={{ marginTop: 'var(--space-3)' }}>
+                                <Textarea label="🚨 Emergency Red Flags" name="emergencyRedFlags" value={emergencyRedFlags}
+                                    onChange={e => setEmergencyRedFlags(e.target.value)}
+                                    placeholder="e.g. If you experience severe pain, bleeding, or loss of consciousness…" rows={3} />
+                            </div>
+
+                            <div style={{ marginTop: 'var(--space-3)' }}>
+                                <Textarea label="📚 Sources / References" name="sources" value={sources}
+                                    onChange={e => setSources(e.target.value)}
+                                    placeholder="e.g. WHO Guidelines on Sexual Health (2023), NACO Handbook…" rows={3} />
+                            </div>
+                        </div>
+
                         <div style={{ display: 'flex', gap: 'var(--space-3)', marginTop: 'var(--space-6)', flexWrap: 'wrap' }}>
                             <Button onClick={() => handleModerate(activeQuestion.id, 'approve')} loading={processing}>
                                 ✅ Approve
@@ -312,7 +342,7 @@ export default function ModeratePage() {
                             <Button onClick={() => handleModerate(activeQuestion.id, 'reject')} variant="danger" loading={processing}>
                                 ❌ Reject
                             </Button>
-                            <Button onClick={() => { setActiveQuestion(null); setAnswerText(''); setEditedText(''); }} variant="ghost">
+                            <Button onClick={() => { setActiveQuestion(null); setAnswerText(''); setEditedText(''); setWhenToSeekHelp(''); setEmergencyRedFlags(''); setSources(''); }} variant="ghost">
                                 Cancel
                             </Button>
                         </div>

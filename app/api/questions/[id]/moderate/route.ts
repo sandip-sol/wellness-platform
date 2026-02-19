@@ -11,13 +11,13 @@ export async function POST(request, { params }) {
     try {
         const { id } = await params;
         const body = await request.json();
-        const { action, editedText, answer, tags, reviewBadge, routeToExpert } = body;
+        const { action, editedText, answer, tags, reviewBadge, routeToExpert, whenToSeekHelp, emergencyRedFlags, sources } = body;
 
         if (!action) {
             return NextResponse.json({ error: 'Action is required.' }, { status: 400 });
         }
 
-        const question = await moderateQuestion(id, { action, editedText, answer, tags, reviewBadge, routeToExpert });
+        const question = await moderateQuestion(id, { action, editedText, answer, tags, reviewBadge, routeToExpert, whenToSeekHelp, emergencyRedFlags, sources });
 
         if (!question) {
             return NextResponse.json({ error: 'Question not found.' }, { status: 404 });

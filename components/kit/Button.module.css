@@ -60,13 +60,15 @@
 
 /* Outline */
 .outline {
-    background: transparent;
-    color: var(--color-primary);
-    border-color: var(--color-primary);
+    background: var(--color-primary-light, hsl(37, 80%, 92%));
+    color: var(--color-ink, #2d2a26);
+    border-color: var(--color-primary, hsl(37, 80%, 60%));
 }
 
 .outline:hover:not(:disabled) {
-    background: var(--color-primary-light);
+    background: var(--color-primary, hsl(37, 80%, 60%));
+    border-color: var(--color-primary-dark, hsl(37, 80%, 50%));
+    color: var(--color-ink, #2d2a26);
 }
 
 /* Ghost */

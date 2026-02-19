@@ -9,6 +9,7 @@ const quickLinks = [
   { title: 'Knowledge Base', description: 'Browse approved answers across key topics and concerns.', href: '/kb' },
   { title: 'Myth Busters', description: 'Separate stigma from science with simple facts.', href: '/myths' },
   { title: 'Learning Paths', description: 'Follow structured paths from beginner to advanced.', href: '/paths' },
+  { title: 'Ancient Literature', description: 'Scholarly explorations of India\'s classical texts on wellness.', href: '/literature' },
 ];
 
 export default function Home() {
@@ -19,15 +20,15 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-12 gap-10 items-center">
             <div className="lg:col-span-6">
-              <span className="text-eyebrow">A privacy-first wellness hub</span>
+              <span className="text-eyebrow">🌿 Sexual awareness & wellness</span>
 
               <h1 className="mt-3 font-serif text-display text-warm-charcoal max-w-xl">
-                A safe space to learn, ask, and build healthier relationships.
+                A safe space to learn, ask, & build healthier relationships.
               </h1>
 
               <p className="mt-4 text-subheadline max-w-xl">
-                Anonymous Q&A, myth-busting, learning paths, and gentle self-check tools — designed with respect,
-                consent, and cultural context in mind.
+                Anonymous questions. Evidence-informed guides.
+                Stigma-free conversations about the topics that matter most.
               </p>
 
               <div className="mt-6 flex flex-col sm:flex-row gap-3">
@@ -39,9 +40,7 @@ export default function Home() {
                 </Link>
               </div>
 
-              <p className="mt-5 text-xs text-warm-secondary">
-                Educational content only — not medical advice. For urgent concerns or symptoms, consult a qualified clinician.
-              </p>
+
             </div>
 
             <div className="lg:col-span-6 relative">
@@ -56,13 +55,7 @@ export default function Home() {
                     sizes="(min-width: 1024px) 520px, 100vw"
                   />
                 </div>
-                <Image
-                  src="/illustrations/botanical-accent.png"
-                  alt=""
-                  width={380}
-                  height={260}
-                  className="pointer-events-none select-none absolute -bottom-10 -right-10 opacity-70 hidden sm:block"
-                />
+
               </div>
             </div>
           </div>
@@ -128,6 +121,24 @@ export default function Home() {
               </p>
               <Link href="/consult" className="inline-block mt-4 text-sm font-semibold text-warm-charcoal hover:underline">
                 Explore expert help →
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SURVEY CTA */}
+      <section>
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-10">
+          <div className="rounded-3xl border border-border bg-card p-8 md:p-12 text-center">
+            <p className="text-eyebrow">New Here?</p>
+            <h2 className="mt-2 font-serif text-headline text-warm-charcoal">Personalize Your Journey</h2>
+            <p className="mt-2 text-sm text-warm-secondary max-w-lg mx-auto">
+              Take a 2-minute anonymous survey and get personalized recommendations — learning paths, topics, and tools tailored to you.
+            </p>
+            <div className="mt-6">
+              <Link href="/survey" className={cn(buttonVariants({ variant: 'outline', size: 'lg' }), 'justify-center')}>
+                Take the Survey →
               </Link>
             </div>
           </div>

@@ -20,7 +20,7 @@ export default function QuizCard({ quiz, onStart }: QuizCardProps) {
                 <CardDescription>{quiz.description}</CardDescription>
             </div>
             <CardFooter>
-                <Button onClick={() => onStart(quiz.id)} variant="primary" style={{ width: '100%' }}>
+                    <Button onClick={() => onStart(quiz.id)} variant="primary" fullWidth>
                     Start Assessment
                 </Button>
             </CardFooter>

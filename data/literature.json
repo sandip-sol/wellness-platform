@@ -1,0 +1,155 @@
+[
+    {
+        "id": "lit-kamasutra",
+        "slug": "kamasutra",
+        "title": "Kāmasūtra",
+        "subtitle": "A Treatise on the Art of Living",
+        "author": "Vātsyāyana Mallanāga",
+        "era": "3rd–5th century CE",
+        "tradition": "Sanskrit Classical Literature",
+        "icon": "📜",
+        "coverColor": "#8B6F47",
+        "summary": "The Kāmasūtra is among the world's most misunderstood texts. Far from being merely a 'sex manual,' it is a comprehensive Sanskrit treatise on cultured living — covering the 64 arts of refinement, courtship psychology, household management, and the ethics of desire. Written by scholar Vātsyāyana, the text positions pleasure (kāma) as one of four life goals alongside ethics (dharma), prosperity (artha), and liberation (moksha). Only about 20% of its seven books address physical intimacy, and even those sections emphasize mutual respect, emotional attunement, and consent.",
+        "keyTeachings": [
+            {
+                "title": "Pleasure Needs Purpose",
+                "description": "Kāma pursued without regard for dharma leads to suffering. Pleasure is meaningful only when rooted in mutual respect and social responsibility."
+            },
+            {
+                "title": "Consent as Foundation",
+                "description": "The text emphasizes reading non-verbal cues and never proceeding without 'joyful willingness' (prīti) — a proto-concept of enthusiastic consent."
+            },
+            {
+                "title": "Women's Agency",
+                "description": "Contrary to exoticized portrayals, women are described as active participants who may initiate intimacy, negotiate boundaries, and retain autonomy within marriage."
+            },
+            {
+                "title": "The 64 Arts",
+                "description": "Beyond intimacy, the text catalogs 64 skills — from poetry and music to perfumery and cooking — as essential to being a complete, cultured person."
+            },
+            {
+                "title": "Sensual Presence",
+                "description": "Touch is framed not as a means to an end, but as contemplative practice. Extended non-goal touch builds what modern therapists call 'interoceptive awareness.'"
+            }
+        ],
+        "modernRelevance": "The Kāmasūtra's emphasis on consent, communication, sensory mindfulness, and emotional attunement aligns remarkably with contemporary sexual wellness principles. Its framework for reading non-verbal cues, practicing non-goal-oriented touch, and integrating pleasure with ethics offers practical wisdom for modern couples navigating intimacy, especially after trauma or during desire mismatches.",
+        "disclaimer": "This content presents the Kāmasūtra in its original academic and philosophical context. It is not intended as instructional material for sexual activity. All interpretations are drawn from peer-reviewed scholarship and certified expert analysis. This platform does not endorse or promote any specific sexual practices.",
+        "sources": [
+            "Doniger, W., & Kakar, S. (2002). Kāmasūtra. Oxford University Press.",
+            "Kakar, S. (1990). Intimate Relations: Exploring Indian Sexuality. University of Chicago Press.",
+            "Shastri, G. S. (Trans.). (1964). The Kāmasūtra of Vātsyāyana. Motilal Banarsidass."
+        ],
+        "whenToSeekHelp": "If reading about intimacy triggers distress, flashbacks, or anxiety, please consider speaking with a trauma-informed therapist. You can reach iCall at 9152987821."
+    },
+    {
+        "id": "lit-ananga-ranga",
+        "slug": "ananga-ranga",
+        "title": "Ananga Ranga",
+        "subtitle": "The Stage of the Bodiless One",
+        "author": "Kalyāṇamalla",
+        "era": "15th–16th century CE",
+        "tradition": "Medieval Sanskrit Literature",
+        "icon": "🪷",
+        "coverColor": "#9B59B6",
+        "summary": "Written by poet Kalyāṇamalla for the Lodi dynasty nobleman Ahmad Khan, the Ananga Ranga ('Stage of the God of Love') is a medieval Indian treatise focused specifically on sustaining marital passion and preventing infidelity through variety and attentiveness. Unlike the Kāmasūtra which addresses broader social life, this text is explicitly couple-focused — offering practical guidance for long-term partners to maintain desire, emotional connection, and mutual satisfaction within marriage.",
+        "keyTeachings": [
+            {
+                "title": "Preventing Relationship Stagnation",
+                "description": "The text's central thesis is that monotony is the root of marital unhappiness, and that sustained effort in variety, communication, and attentiveness prevents emotional distance."
+            },
+            {
+                "title": "Temperament Matching",
+                "description": "Classifies individuals by temperament and physique to help partners understand compatibility and adjust intimate approaches accordingly."
+            },
+            {
+                "title": "Seasonal & Cyclical Desire",
+                "description": "Recognizes that desire fluctuates with seasons, health, mood, and life stages — validating what modern science confirms about libido variation."
+            },
+            {
+                "title": "Emotional Foreplay",
+                "description": "Emphasizes that emotional connection, conversation, and shared activities are prerequisites for physical intimacy — not optional extras."
+            }
+        ],
+        "modernRelevance": "The Ananga Ranga's focus on sustaining long-term desire is remarkably relevant to modern couples therapy. Its insights about relationship maintenance, desire fluctuation, and the importance of novelty within commitment mirror established therapeutic frameworks like the Gottman Method and Esther Perel's work on erotic intelligence.",
+        "disclaimer": "This content presents the Ananga Ranga in its historical and scholarly context. It is educational material intended for adults and is not prescriptive guidance for sexual activity.",
+        "sources": [
+            "Burton, R. F., & Arbuthnot, F. F. (Trans.). (1885). Ananga Ranga. Kama Shastra Society.",
+            "Comfort, A. (Ed.). (1964). The Koka Shastra and Other Medieval Indian Writings on Love. Allen & Unwin."
+        ],
+        "whenToSeekHelp": "If you're experiencing relationship distress, desire discrepancies, or emotional disconnection, a certified couples therapist can help. Consider reaching out to a counselor near you."
+    },
+    {
+        "id": "lit-ratirahasya",
+        "slug": "ratirahasya",
+        "title": "Ratirahasya (Koka Shastra)",
+        "subtitle": "Secrets of Love",
+        "author": "Kokkoka",
+        "era": "11th–12th century CE",
+        "tradition": "Medieval Sanskrit Literature",
+        "icon": "🌺",
+        "coverColor": "#E67E22",
+        "summary": "The Ratirahasya ('Secrets of passion'), also known as the Koka Shastra after its author Kokkoka, is a medieval Sanskrit text that builds upon the Kāmasūtra tradition while incorporating Ayurvedic health principles. It uniquely integrates sexual wellness with holistic health — discussing the relationship between diet, seasonal rhythms, physical wellness, and intimate life. The text is notable for its attention to women's pleasure and satisfaction as central (not secondary) to healthy intimacy.",
+        "keyTeachings": [
+            {
+                "title": "Ayurvedic Integration",
+                "description": "Links sexual health to overall wellness through diet, exercise, rest, and seasonal living — anticipating modern integrative approaches to sexual medicine."
+            },
+            {
+                "title": "Women's Pleasure as Priority",
+                "description": "Explicitly states that a partner's satisfaction is the measure of good intimacy, placing women's experience at the center of its framework."
+            },
+            {
+                "title": "Body Awareness",
+                "description": "Catalogues diverse body types and preferences without judgment, promoting acceptance of natural variation."
+            },
+            {
+                "title": "Health & Vitality",
+                "description": "Provides guidance on maintaining sexual health through nutrition, herbal remedies (within Ayurvedic tradition), and lifestyle balance."
+            }
+        ],
+        "modernRelevance": "The Ratirahasya's integration of sexual wellness with holistic health anticipates modern biopsychosocial approaches to sexual medicine. Its emphasis on women's pleasure and body acceptance aligns with contemporary sex-positive frameworks, while its Ayurvedic wellness advice resonates with the growing interest in integrative health approaches.",
+        "disclaimer": "This content is presented for educational and historical purposes. Ayurvedic remedies mentioned in historical context should not be treated as medical advice. Always consult qualified healthcare providers for health concerns.",
+        "sources": [
+            "Comfort, A. (Ed.). (1964). The Koka Shastra and Other Medieval Indian Writings on Love. Allen & Unwin.",
+            "Doniger, W. (2016). Redeeming the Kamasutra. Oxford University Press."
+        ],
+        "whenToSeekHelp": "If you have concerns about sexual health, always consult a qualified healthcare provider rather than relying on historical texts."
+    },
+    {
+        "id": "lit-charaka-sexuality",
+        "slug": "charaka-on-wellness",
+        "title": "Charaka Saṃhitā on Intimate Wellness",
+        "subtitle": "Ayurvedic Perspectives on Sexual Health",
+        "author": "Charaka (compiled tradition)",
+        "era": "2nd century BCE – 2nd century CE",
+        "tradition": "Ayurvedic Medical Literature",
+        "icon": "🌿",
+        "coverColor": "#27AE60",
+        "summary": "The Charaka Saṃhitā, one of the foundational texts of Ayurveda, includes significant discussion of vajikarana (aphrodisiac therapy / reproductive wellness) as one of its eight clinical branches. Unlike purely pleasure-focused texts, the Charaka approaches sexual health from a medical and wellness perspective — discussing healthy frequency, seasonal variations in desire, the relationship between diet and sexual vitality, and the impact of mental health on intimate life. This medical framing makes it particularly relevant to modern integrative sexual health conversations.",
+        "keyTeachings": [
+            {
+                "title": "Vajikarana (Reproductive Wellness)",
+                "description": "A dedicated clinical branch focusing on sexual vitality, fertility, and the maintenance of reproductive health as integral to overall wellbeing."
+            },
+            {
+                "title": "Mind-Body Connection",
+                "description": "Explicitly links mental states (anxiety, grief, anger) to sexual dysfunction — anticipating modern psychosexual medicine by two millennia."
+            },
+            {
+                "title": "Moderation & Balance",
+                "description": "Prescribes moderate sexual activity aligned with individual constitution (prakriti), season, and health status — rejecting both excess and suppression."
+            },
+            {
+                "title": "Dietary Influence",
+                "description": "Details how specific foods, herbs, and lifestyle practices support sexual health — an early form of nutritional sexology."
+            }
+        ],
+        "modernRelevance": "The Charaka's biopsychosocial approach to sexual health — linking physical constitution, mental state, diet, and seasonal rhythms — prefigures the WHO's holistic definition of sexual health. Its vajikarana protocols, while requiring modern clinical validation, demonstrate that holistic sexual wellness was a recognised medical discipline in ancient India.",
+        "disclaimer": "Ayurvedic treatments and remedies mentioned in this historical context are for educational purposes only. They should not replace evidence-based medical care. Always consult qualified healthcare providers for any health concerns.",
+        "sources": [
+            "Sharma, P. V. (Trans.). (1981–1994). Caraka-Saṃhitā (4 vols.). Chaukhambha Orientalia.",
+            "Dagmar, W. (2003). The Roots of Ayurveda. Penguin Classics."
+        ],
+        "whenToSeekHelp": "For any reproductive or sexual health concerns, please consult a qualified medical professional. Ayurvedic historical references are not substitutes for modern medical advice."
+    }
+]

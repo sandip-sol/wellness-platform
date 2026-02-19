@@ -140,7 +140,7 @@ export async function getModerationQueue() {
         .toArray();
 }
 
-export async function moderateQuestion(id, { action, editedText, answer, tags, reviewBadge, routeToExpert }) {
+export async function moderateQuestion(id, { action, editedText, answer, tags, reviewBadge, routeToExpert, whenToSeekHelp, emergencyRedFlags, sources }) {
     const questionsCol = await col('questions');
     const question = await questionsCol.findOne({ id });
     if (!question) return null;
@@ -192,7 +192,9 @@ export async function moderateQuestion(id, { action, editedText, answer, tags, r
                 answer: answer || updated?.answers?.[0]?.text || '',
                 category: question.category,
                 tags: tags || question.tags,
-                whenToSeekHelp: '',
+                whenToSeekHelp: whenToSeekHelp || '',
+                emergencyRedFlags: emergencyRedFlags || '',
+                sources: sources || '',
                 slug,
                 helpfulCount: question.helpfulCount,
                 status: 'published',
@@ -372,3 +374,148 @@ export async function getConsults(sessionTokenHash) {
         .sort({ createdAt: -1 })
         .toArray();
 }
+
+// ===== SURVEY =====
+export async function saveSurveyResults({ sessionTokenHash, answers, recommendations }) {
+    const surveyCol = await col('surveyResults');
+    // Upsert: one result per session
+    await surveyCol.updateOne(
+        { sessionTokenHash },
+        { $set: { answers, recommendations, updatedAt: new Date().toISOString() } },
+        { upsert: true }
+    );
+    return true;
+}
+
+export async function getSurveyResults(sessionTokenHash) {
+    const surveyCol = await col('surveyResults');
+    return await surveyCol.findOne({ sessionTokenHash }, { projection: { _id: 0 } }) || null;
+}
+
+export function generateSurveyRecommendations(answers) {
+    const tagCounts: Record<string, number> = {};
+    const pathIds: Set<string> = new Set();
+    let level = 'beginner';
+    const featureRecommendations: string[] = [];
+
+    for (const answer of answers) {
+        const value = answer.value;
+        // Find matching question in survey data to get option metadata
+        if (answer.questionId === 'q-knowledge') {
+            const levelMap: Record<string, string> = {
+                beginner: 'beginner',
+                intermediate: 'intermediate',
+                advanced: 'advanced',
+                unsure: 'beginner',
+            };
+            level = levelMap[value as string] || 'beginner';
+        }
+
+        if (answer.questionId === 'q-learning-style') {
+            // Map learning style to feature recommendations
+            const styleMap: Record<string, string[]> = {
+                reading: ['learn', 'kb'],
+                qa: ['ask', 'kb'],
+                reflection: ['quizzes', 'journal'],
+                structured: ['paths', 'learn'],
+                mix: ['paths', 'kb', 'quizzes'],
+            };
+            const recs = styleMap[value as string] || ['paths', 'kb'];
+            featureRecommendations.push(...recs);
+        }
+
+        // Collect tags from single-select options
+        if (typeof value === 'string') {
+            // Look for tags in known question mappings
+            const tagMap: Record<string, Record<string, string[]>> = {
+                'q-relationship': {
+                    single: ['consent', 'body-literacy', 'mental-wellbeing'],
+                    dating: ['relationships', 'consent', 'sexual-health'],
+                    married: ['marriage-intimacy', 'relationships', 'sexual-health'],
+                    complicated: ['mental-wellbeing', 'relationships', 'consent'],
+                },
+                'q-goal': {
+                    'learn-health': ['sexual-health', 'body-literacy'],
+                    'improve-relationship': ['relationships', 'marriage-intimacy'],
+                    'overcome-anxiety': ['mental-wellbeing'],
+                    'get-answers': ['sexual-health'],
+                },
+            };
+            const qMap = tagMap[answer.questionId];
+            if (qMap && qMap[value]) {
+                for (const tag of qMap[value]) {
+                    tagCounts[tag] = (tagCounts[tag] || 0) + 1;
+                }
+            }
+        }
+
+        // Collect tags from multi-select options (interests)
+        if (Array.isArray(value)) {
+            const interestConfig: Record<string, { tags: string[]; pathId?: string }> = {
+                health: { tags: ['sexual-health'], pathId: 'path-sexual-health' },
+                communication: { tags: ['relationships'], pathId: 'path-communication' },
+                consent: { tags: ['consent'], pathId: 'path-consent' },
+                anxiety: { tags: ['mental-wellbeing'], pathId: 'path-anxiety' },
+                lgbtqia: { tags: ['lgbtqia'], pathId: 'path-lgbtqia' },
+                contraception: { tags: ['contraception'] },
+                literature: { tags: ['body-literacy'], pathId: 'kamasutra_wisdom_series' },
+                marriage: { tags: ['marriage-intimacy'], pathId: 'path-communication' },
+            };
+            for (const v of value) {
+                const cfg = interestConfig[v];
+                if (cfg) {
+                    for (const tag of cfg.tags) tagCounts[tag] = (tagCounts[tag] || 0) + 2; // weight interests more
+                    if (cfg.pathId) pathIds.add(cfg.pathId);
+                }
+            }
+        }
+    }
+
+    // Sort categories by relevance
+    const sortedTags = Object.entries(tagCounts)
+        .sort(([, a], [, b]) => b - a)
+        .slice(0, 4)
+        .map(([tag]) => tag);
+
+    // Map to category objects
+    const recommendedCategories = sortedTags.map(tag => {
+        const catMap: Record<string, { id: string; name: string; icon: string }> = {
+            'sexual-health': { id: 'sexual-health', name: 'Sexual Health', icon: '🏥' },
+            relationships: { id: 'relationships', name: 'Relationships & Communication', icon: '💬' },
+            consent: { id: 'consent', name: 'Consent & Boundaries', icon: '🤝' },
+            lgbtqia: { id: 'lgbtqia', name: 'LGBTQIA+ Wellness', icon: '🌈' },
+            'mental-wellbeing': { id: 'mental-wellbeing', name: 'Mental & Emotional Wellbeing', icon: '🧠' },
+            'marriage-intimacy': { id: 'marriage-intimacy', name: 'Marriage & Long-term Intimacy', icon: '💑' },
+            contraception: { id: 'contraception', name: 'Contraception & Family Planning', icon: '💊' },
+            'body-literacy': { id: 'body-literacy', name: 'Body Literacy & Anatomy', icon: '📖' },
+        };
+        return catMap[tag] || null;
+    }).filter(Boolean);
+
+    // Map path IDs to path objects
+    const allPaths = pathsData as any[];
+    const recommendedPaths = Array.from(pathIds)
+        .map(id => allPaths.find((p: any) => p.id === id))
+        .filter(Boolean)
+        .map((p: any) => ({ id: p.id, title: p.title, description: p.description, icon: p.icon }));
+
+    // Map features
+    const featureMap: Record<string, { title: string; description: string; href: string }> = {
+        learn: { title: '📖 Learn Articles', description: 'Read expert-written wellness guides.', href: '/learn' },
+        kb: { title: '💡 Knowledge Base', description: 'Browse answered Q&As by topic.', href: '/kb' },
+        ask: { title: '❓ Ask Anonymously', description: 'Submit your own question privately.', href: '/ask' },
+        quizzes: { title: '📝 Self-Check Quizzes', description: 'Gentle reflection tools for self-awareness.', href: '/quizzes' },
+        journal: { title: '📔 Private Journal', description: 'Journaling prompts for personal growth.', href: '/journal' },
+        paths: { title: '🗺️ Learning Paths', description: 'Structured courses from beginner to advanced.', href: '/paths' },
+    };
+    const uniqueFeatures = [...new Set(featureRecommendations)];
+    const recommendedFeatures = uniqueFeatures.map(f => featureMap[f]).filter(Boolean);
+
+    return {
+        categories: recommendedCategories,
+        paths: recommendedPaths,
+        features: recommendedFeatures,
+        level,
+    };
+}
+

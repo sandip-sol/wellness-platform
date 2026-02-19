@@ -96,9 +96,7 @@ export function WsQuizCard({ quiz, illustrationSrc, onStart, className }: WsQuiz
             "w-full py-3.5 rounded-full text-sm font-semibold transition-colors",
             "flex items-center justify-center gap-2",
             "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
-            badge.variant === "active"
-              ? "bg-primary hover:bg-[hsl(var(--primary-hover))] text-primary-foreground"
-              : "border border-border hover:border-primary text-foreground"
+            "bg-primary hover:bg-[hsl(var(--primary-hover))] text-primary-foreground"
           )}
         >
           Start {badge.label === "Couples" ? "Check-in" : "Self-Check"}

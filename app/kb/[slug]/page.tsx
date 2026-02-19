@@ -81,6 +81,23 @@ export default async function QAPage({ params }) {
                 </div>
             )}
 
+            {qa.sources && (
+                <div style={{
+                    marginTop: 'var(--space-6)',
+                    padding: 'var(--space-5)',
+                    background: 'var(--color-bg-alt)',
+                    borderRadius: 'var(--radius-lg)',
+                    border: '1px solid var(--color-border-light)',
+                }}>
+                    <h3 style={{ fontSize: 'var(--font-size-sm)', fontWeight: 600, marginBottom: 'var(--space-3)' }}>
+                        📚 Sources & References
+                    </h3>
+                    <p style={{ fontSize: 'var(--font-size-sm)', color: 'var(--color-ink-muted)', lineHeight: 'var(--line-height-relaxed)', whiteSpace: 'pre-line' }}>
+                        {qa.sources}
+                    </p>
+                </div>
+            )}
+
             <div style={{ marginTop: 'var(--space-6)', display: 'flex', gap: 'var(--space-4)', fontSize: 'var(--font-size-sm)', color: 'var(--color-ink-muted)' }}>
                 <span>👍 {qa.helpfulCount} found this helpful</span>
                 {qa.tags && qa.tags.map(t => <Badge key={t} variant="category" label={t} />)}
